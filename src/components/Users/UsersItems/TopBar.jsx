@@ -2,7 +2,7 @@ import React from 'react'
 
 const TopBar = () => {
   return (
-    <section className='flex justify-between px-5'>
+    <section className='flex justify-between px-2'>
       <div><h2 className='font-bold text-2xl'>Users</h2></div>
       <div className='relative'>
         <form>

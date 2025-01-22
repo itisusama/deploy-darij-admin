@@ -178,7 +178,7 @@ const UsersTable = () => {
     }, [userChanged]);
 
     const startIndex = (currentPage - 1) * recordsPerPage;
-    const visibleUsers = useData.slice(startIndex, startIndex + 9);
+    const visibleUsers = useData.slice(startIndex, startIndex + 8);
 
     const handleRecordsPerPageChange = (e) => {
         setRecordsPerPage(Number(e.target.value));
@@ -189,7 +189,7 @@ const UsersTable = () => {
 
 
   return (
-    <section className='mt-5 px-4 overflow-y-auto w-full'>
+    <section className='mt-5 overflow-y-auto w-full'>
         <div className="relative overflow-hidden rounded-[22px]">
     <div className="overflow-x-auto">
         <table className="table-auto w-full text-left">
@@ -284,7 +284,7 @@ const UsersTable = () => {
 </div>
 
 {/* START:: Pagination */}
-<div className="flex flex-wrap sm:flex-nowrap justify-center sm:justify-between items-center mt-4 px-4 absolute bottom-5 left-0 sm:left-[230px] w-full gap-4">
+<div className="flex flex-wrap sm:flex-nowrap justify-center sm:justify-between items-center mt-4 absolute bottom-3 left-0 sm:left-[230px] w-full gap-4">
     {/* Left Pagination Controls */}
     <div className="flex gap-2 items-center justify-center sm:justify-start">
                     <button
