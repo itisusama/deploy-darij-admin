@@ -1,0 +1,62 @@
+{
+  "rewrites": [
+    { "source": "/", "destination": "/" },
+    { "source": "/(.*)", "destination": "/" },
+    { "source": "/forgot-password", "destination": "/forgot-password" },
+    { "source": "/dashboard", "destination": "/dashboard" },
+    { "source": "/users", "destination": "/users" },
+    { "source": "/games", "destination": "/games" },
+    { "source": "/shop", "destination": "/shop" },
+    { "source": "/learn", "destination": "/learn" },
+    { "source": "/settings", "destination": "/settings" },
+    { "source": "/user-profile", "destination": "/user-profile" },
+    { "source": "/plan", "destination": "/plan" },
+    { "source": "/addplan", "destination": "/addplan" },
+    { "source": "/promo-code", "destination": "/promo-code" },
+    { "source": "/addpromo", "destination": "/addpromo" },
+    { "source": "/editpromo", "destination": "/editpromo" },
+    { "source": "/addbanner", "destination": "/addbanner" },
+    { "source": "/recent-sales", "destination": "/recent-sales" },
+    { "source": "/detailed-view", "destination": "/detailed-view" },
+    { "source": "/mini-games", "destination": "/mini-games" },
+    { "source": "/mini-game-two", "destination": "/mini-game-two" },
+    { "source": "/mini-game-three", "destination": "/mini-game-three" },
+    { "source": "/mini-game-four", "destination": "/mini-game-four" },
+    { "source": "/mini-game-five", "destination": "/mini-game-five" },
+    { "source": "/edit-game-version", "destination": "/edit-game-version" },
+    { "source": "/add-game-version", "destination": "/add-game-version" },
+    { "source": "/word-learn", "destination": "/word-learn" },
+    { "source": "/mini-game-one", "destination": "/mini-game-one" },
+    { "source": "/add-new-minigameone", "destination": "/add-new-minigameone" },
+    {
+      "source": "/edit-new-minigameone",
+      "destination": "/edit-new-minigameone"
+    },
+    { "source": "/edit-minigamefour", "destination": "/edit-minigamefour" },
+    { "source": "/add-minigamefour", "destination": "/add-minigamefour" },
+    { "source": "/edit-minigamethree", "destination": "/edit-minigamethree" },
+    { "source": "/add-minigamethree", "destination": "/add-minigamethree" },
+    { "source": "/minigameone-list", "destination": "/minigameone-list" },
+    {
+      "source": "/professional-version",
+      "destination": "/professional-version"
+    },
+    {
+      "source": "/edit-professional-version",
+      "destination": "/edit-professional-version"
+    },
+    {
+      "source": "/add-professional-version",
+      "destination": "/add-professional-version"
+    },
+    { "source": "/edit_word", "destination": "/edit_word" },
+    {
+      "source": "/add-new-minigamefive",
+      "destination": "/add-new-minigamefive"
+    },
+    {
+      "source": "/edit-new-minigamefive",
+      "destination": "/edit-new-minigamefive"
+    }
+  ]
+}
