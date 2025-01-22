@@ -219,8 +219,8 @@ const UsersTable = () => {
                                 <h2 className="text-sm sm:text-base">{user.name}</h2>
                             </div>
                         </td>
-                        <td className="py-1 border p-4 text-sm sm:text-base"  onClick={() => handleRowClick(user)}>{user.email}</td>
-                        <td className="py-1 border p-4"  onClick={() => handleRowClick(user)}>
+                        <td className="py-1 border p-4 text-sm sm:text-base cursor-pointer"  onClick={() => handleRowClick(user)}>{user.email}</td>
+                        <td className="py-1 border p-4 cursor-pointer"  onClick={() => handleRowClick(user)}>
                             <div className="flex">
                                 {user.languages.map((lang, index) => (
                                     <img
@@ -234,8 +234,8 @@ const UsersTable = () => {
                                 ))}
                             </div>
                         </td>
-                        <td className="py-1 border p-4 text-sm sm:text-base"  onClick={() => handleRowClick(user)}>{user.score}</td>
-                        <td className="py-1 border p-4 text-sm sm:text-base"  onClick={() => handleRowClick(user)}>
+                        <td className="py-1 border p-4 text-sm sm:text-base cursor-pointer"  onClick={() => handleRowClick(user)}>{user.score}</td>
+                        <td className="py-1 border p-4 text-sm sm:text-base cursor-pointer"  onClick={() => handleRowClick(user)}>
                             {user.subscription}
                         </td>
                         <td className="py-1 border p-4 relative">
@@ -247,15 +247,6 @@ const UsersTable = () => {
                             </div>
                             {menuIndex === index && (
                                 <div className="absolute right-7 top-8 bg-white border border-[#E1E5E8] rounded-lg shadow-md w-40 h-auto z-10">
-                                    {/* <button className="block w-full text-left px-4 py-2 text-sm hover:bg-gray-100">
-                                        <div className="flex gap-2">
-                                            <img src={View} alt="view" />
-                                            <p className="font-inter text-[14px] font-[400]">
-                                                View Profile
-                                            </p>
-                                        </div>
-                                    </button> */}
-
                                     <button className="block w-full text-left px-4 py-2 text-sm hover:bg-gray-100">
                                         <div className="flex gap-2">
                                             <img src={Cancel} alt="block" />
