@@ -52,7 +52,7 @@ const My_Profile = () => {
             id="email"
             name="email"
             placeholder="Enter your Email"
-            className="mt-1 p-2 w-full border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-yellow-500 focus:ring-1"
+            className="mt-1 p-2 w-full border border-gray-300 rounded-md focus:ring-yellow-500 focus:ring-1"
           />
         </div>
       </div>
