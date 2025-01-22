@@ -118,7 +118,7 @@ const UsersTable = () => {
         navigate('/user-profile', { state: { user } });
     };
 
-    const [recordsPerPage, setRecordsPerPage] = useState(8); // Dynamic items per page
+    const [recordsPerPage, setRecordsPerPage] = useState(7); // Dynamic items per page
     const [currentPage, setCurrentPage] = useState(1);
     const [menuIndex, setMenuIndex] = useState(null);
     const [userChanged, setUserChanged] = useState(false);
@@ -127,7 +127,7 @@ const UsersTable = () => {
         if (window.innerHeight < 560) {
             setRecordsPerPage(6); // Adjust for smaller screens
         } else {
-            setRecordsPerPage(8); // Default value
+            setRecordsPerPage(7); // Default value
         }
     };
 
@@ -178,7 +178,7 @@ const UsersTable = () => {
     }, [userChanged]);
 
     const startIndex = (currentPage - 1) * recordsPerPage;
-    const visibleUsers = useData.slice(startIndex, startIndex + 8);
+    const visibleUsers = useData.slice(startIndex, startIndex + 7);
 
     const handleRecordsPerPageChange = (e) => {
         setRecordsPerPage(Number(e.target.value));
