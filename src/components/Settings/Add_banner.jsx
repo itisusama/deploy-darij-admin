@@ -52,7 +52,7 @@ const Add_banner = () => {
       </div>
       {/* Banner Section  */}
       {!compChange ? (
-        <div className="h-screen overflow-y-auto">
+        <div className="h-screen overflow-y-auto custom-scrollbar">
           {bannerItems.map((item) => {
             return (
               <div
