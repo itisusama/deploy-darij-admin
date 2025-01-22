@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Addword = () => {
   return (
     <div className="overflow-y-auto h-screen custom-scrollbar">
-      <div className=" border rounded-3xl m-2 p-4 h-[620px]">
+      <div className=" border rounded-3xl m-2 p-4 h-[560px]">
         <div className=" font-inter font-semibold text-xl">Add New</div>
         <div className="mt-4 mb-2">
           <label htmlFor="text" className="text-[#000000]">
@@ -19,7 +19,7 @@ const Addword = () => {
         </div>
         <div className=""> <Uploadwordimg/> </div>
 
-        <div className="relative space-x-2 float-right mt-4">
+        <div className="relative space-x-2 float-right mt-6">
           <Link to="/word-learn">
           <button className="border  text-black font-bold py-2 px-4 rounded-full w-[210px] ">
           Cancel
@@ -30,7 +30,7 @@ const Addword = () => {
           </button>
         </div>
       </div>
-      <div className="mb-44"></div>
+      <div className="mb-24"></div>
     </div>
   );
 };

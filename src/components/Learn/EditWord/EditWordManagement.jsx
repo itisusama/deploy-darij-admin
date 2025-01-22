@@ -33,7 +33,7 @@ const EditWordManagement = () => {
           </button>
         </div>
       </div>
-      <div className="mb-44"></div>
+      <div className="mb-24"></div>
     </div>
   )
 }
