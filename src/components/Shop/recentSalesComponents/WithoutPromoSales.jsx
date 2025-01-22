@@ -11,7 +11,7 @@ const WithoutPromoSales = () => {
     };
 
     return (
-        <div className='w-full h-[240px] border border-[#E1E5E8] rounded-[30px] bg-white overflow-hidden mb-60'>
+        <div className='w-full h-[240px] border border-[#E1E5E8] rounded-[30px] bg-white overflow-hidden mb-24'>
             <table className="w-full h-full border-collapse">
                 <thead className='h-[22px] bg-[#FFF1B2] text-black'>
                     <tr className="w-full">

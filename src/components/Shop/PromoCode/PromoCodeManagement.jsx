@@ -5,7 +5,7 @@ import PromoCodeList from '../promoCodeComponents/PromoCodeList'
 
 const PromoCodeManagement = () => {
     return (
-        <div className='px-4'>
+        <div>
           {/* ShopHeader and Button */}
           <div className="flex justify-between">
             <ShopHeader />

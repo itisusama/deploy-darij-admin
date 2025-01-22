@@ -16,7 +16,7 @@ const LanguageList = ({ language }) => {
     };
 
     return (
-        <div className="w-full h-16 flex flex-col px-8">
+        <div className="w-full h-16 flex flex-col px-4">
             <div className="flex flex-col space-y-6 relative mr-6">
                 {language.map((lang, index) => (
                     <div key={index} className="flex items-center h-[64px] rounded-[12px] bg-[#FFFF] p-4 relative">

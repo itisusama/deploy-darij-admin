@@ -5,7 +5,7 @@ import WithoutPromoSales from '@/components/Shop/recentSalesComponents/WithoutPr
 
 const RecentSalesManagement = () => {
   return (
-    <div className='h-screen overflow-y-auto custom-scrollbar px-4'>
+    <div className='h-screen overflow-y-auto custom-scrollbar'>
       <ShopHeader />
       <h2 className=' font-inter font-[600] text-[24px] leading-9 mb-2'>With Promo Code</h2>
       <WithPromoSales/>

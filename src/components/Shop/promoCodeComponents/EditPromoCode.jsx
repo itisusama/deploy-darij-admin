@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 const EditPromoCode = () => {
     const navigate = useNavigate();
     return (
-      <section className='h-screen overflow-y-auto'>
+      <section className='h-screen overflow-y-auto overflow-x-hidden custom-scrollbar'>
         <div className='w-full h-fit bg-white border border-[#E1E5E8] rounded-[30px]'>
             {/* header */}
             <h2 className='font-inter text-2xl font-semibold leading-9 text-left text-black pt-7 pl-7'>Edit</h2>

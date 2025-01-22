@@ -5,7 +5,7 @@ import Planlist from '@/components/Shop/PlanComponents/PlanList'
 
 const PlanManagement = () => {
     return (
-        <div className='px-8'>
+        <div className='px-4'>
             {/* ShopHeader and Button */}
             <div className="flex justify-between">
                 <ShopHeader />

@@ -12,7 +12,8 @@ const AddPlan = () => {
   };
 
   return (
-    <div className='w-full h-[580px] border border-[#E1E5E8] rounded-[30px] bg-white'>
+    <section className='overflow-y-auto h-screen custom-scrollbar'>
+      <div className='w-full h-fit border border-[#E1E5E8] rounded-[30px] bg-white'>
       <h1 className='mt-[25px] ml-10 font-inter font-[600] text-[24px] leading-[36px]'>Add Plan</h1>
 
       {/* Text Editor Section */}
@@ -67,7 +68,7 @@ const AddPlan = () => {
       </div>
 
       {/* Buttons */}
-      <div className="flex justify-end mt-16">
+      <div className="flex justify-end mt-44 mb-12">
         <button
           onClick={() => navigate('/plan')}
           className="w-[210px] h-[44px] rounded-[100px] border border-[#000000] py-2 px-4 font-inter font-[600] text-[16px] leading-6"
@@ -81,6 +82,8 @@ const AddPlan = () => {
         </button>
       </div>
     </div>
+    <div className='mb-24'></div>
+    </section>
   );
 };
 

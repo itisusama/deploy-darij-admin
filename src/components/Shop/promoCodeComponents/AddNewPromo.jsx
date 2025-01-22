@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 const AddNewPromo = () => {
     const navigate = useNavigate();
     return (
-        <section className='h-screen overflow-y-auto overflow-x-hidden'>
+        <section className='h-screen overflow-y-auto overflow-x-hidden custom-scrollbar'>
         <div className='w-full h-fit bg-white border border-[#E1E5E8] rounded-[30px] p-7'>
     {/* header */}
     <h2 className='font-inter text-2xl font-semibold leading-9 text-left text-black'>Add New</h2>

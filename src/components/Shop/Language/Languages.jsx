@@ -21,7 +21,7 @@ const Languages = () => {
   return (
     <div>
       {/* ShopHeader and Button */}
-      <div className="flex justify-between px-8">
+      <div className="flex justify-between px-4">
         <ShopHeader />
         <Button title="Add Language" onClick={handleAddLanguageClick} />
       </div>
