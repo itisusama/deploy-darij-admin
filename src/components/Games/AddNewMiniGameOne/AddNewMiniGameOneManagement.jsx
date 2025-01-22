@@ -56,21 +56,29 @@ const AddNewMiniGameOneManagement = () => {
                     <div id="tags" className="relative mt-2 text-[#8D8D8D]">
                         <ReactTags
                             tags={tags}
-                            suggestions={suggestions}
+                            // suggestions={suggestions}
                             handleDelete={handleDelete}
                             handleAddition={handleAddition}
-                            placeholder="Type and press enter to add words"
+                            placeholder=""
                             classNames={{
                                 tags: "flex items-center bg-[#f2f2f2] p-2 rounded-md",
-                                tagInput: "inline-block rounded-md",
-                                tagInputField: "bg-gray-100 w-full h-[38px] border-none outline-none px-4 py-2 text-sm text-[#8D8D8D] placeholder-gray-400",
+                                tagInputField: "bg-transparent w-full h-[38px] px-4 py-2 border-none shadow-none",
                                 selected: "flex flex-wrap",
                                 tag: "flex items-center bg-[#FFFFFF] text-[#8D8D8D] text-sm px-3 py-0 rounded-md mr-2 my-1",
-                                remove: "ml-2 bg-[#8D8D8D] text-sm flex items-center justify-center p-1 rounded-full cursor-pointer mini-game-one-remove",
-                                suggestions: "absolute z-10 bg-white border border-gray-300 rounded-md shadow-md mt-1 w-full",
-                                activeSuggestion: "bg-gray-200 cursor-pointer",
+                                remove: "text-black"
                             }}
-                            
+                            removeComponent={({ index }) => (
+                                <span
+                                onClick={() => {
+                                    console.log("Tag delete clicked at index:", index);
+                                    handleDelete(index); // Call your handleDelete function directly
+                                }}
+                                    className="ml-2 text-black cursor-pointer"
+                                    style={{ fontSize: '14px'}}
+                                >
+                                    X
+                                </span>
+                            )}
                         />
                     </div>
                 </div>
@@ -125,7 +133,7 @@ const AddNewMiniGameOneManagement = () => {
                     Add
                 </button>
             </div>
-        <div className='mb-64'></div>  
+        <div className='mb-24'></div>  
         </section>
     );
 };

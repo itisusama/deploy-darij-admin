@@ -53,7 +53,7 @@ const [url, setUrl] = useState('');
   
   return (
     <section className="px-4 overflow-y-auto custom-scrollbar">
-        <div className='p-6 bg-white rounded-[30px] border mb-60 pb-24'>
+        <div className='p-6 bg-white rounded-[30px] border mb-24 pb-24'>
          <h2 className='font-inter font-[600] text-[24px]'>Edit</h2>
             <div className="mt-4">
                 <p className='font-inter text-[16px] font-[400]'>Add Question <span className='text-red-600'>*</span></p>
@@ -141,7 +141,7 @@ const [url, setUrl] = useState('');
                   </div>
 
                   {/* START:: Buttons */}
-                  <div className='flex gap-3 relative mt-3 bottom-0 float-right'>
+                  <div className='flex gap-3 relative mt-6 bottom-0 float-right'>
                   <Link to="/professional-version">
                   <button
                   // onClick={handleNextClick}

@@ -115,7 +115,7 @@ const EditNewMiniGameFiveManagement = () => {
                     </button>
                 </div>
             </div>
-            <div className='mb-64'></div>
+            <div className='mb-24'></div>
         </div>
     );
 };

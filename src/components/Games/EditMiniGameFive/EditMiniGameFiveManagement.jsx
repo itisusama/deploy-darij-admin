@@ -18,7 +18,7 @@ const EditMiniGameFiveManagement = () => {
   };
 
   return (
-    <div className="overflow-y-auto h-screen">
+    <div className="overflow-y-auto h-screen custom-scrollbar">
       <div className="w-full h-[585px] bg-[#FFFFFF] border border-[#E1E5E8] rounded-[30px] overflow-y-auto pb-10">
         <h1 className="font-inter font-semibold text-2xl leading-9 pt-6 px-6 pb-4">Edit</h1>
         <div className="mx-5">

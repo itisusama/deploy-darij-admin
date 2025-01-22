@@ -25,7 +25,7 @@ const EditMiniGameThreeManagement = () => {
         <Dariggable/>
 
         {/* BUTTIONS  */}
-        <div className="relaive right-0 space-x-2 float-right mt-8">
+        <div className="relaive right-0 space-x-2 float-right mt-12">
           <Link to="/mini-game-three">
           <button className="border  text-black font-bold py-2 px-4 rounded-full w-[210px] ">
           Cancel
@@ -38,7 +38,7 @@ const EditMiniGameThreeManagement = () => {
         </div>        
       </div>
 
-      <div className="mb-44"></div>
+      <div className="mb-24"></div>
     </div>
   );
 };

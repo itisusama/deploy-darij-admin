@@ -2,25 +2,27 @@ import React, { useState } from "react";
 // import { Wordlist } from "../../Data/Wordlist";
 
 import Pagination from "../../Pagination"
-import { Wordlist } from "../../../Data/WordlistPage";
+import { Wordlist as DefaultWordlist } from "../../../Data/WordlistPage";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEllipsisVertical } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
 import Left from '../../../assets/left-nav.svg';
 import Right from '../../../assets/right-nav.svg';
 
-const WordsContainer = ({path}) => {
+const WordsContainer = ({path, customWordlist}) => {
     const navigate = useNavigate();
       const [menuIndex, setMenuIndex] = useState(null);
     
       const toggleMenu = (index) => {
         setMenuIndex(menuIndex === index ? null : index);
       };
-       const [recordsPerPage, setRecordsPerPage] = useState(8); // Dynamic items per page
+       const [recordsPerPage, setRecordsPerPage] = useState(100); // Dynamic items per page
           const [currentPage, setCurrentPage] = useState(1);
 
-          const totalPages = Math.ceil(10 / recordsPerPage);
-          const totalItems = 10;
+          const wordlist = customWordlist || DefaultWordlist;
+
+          const totalPages = Math.ceil(12 / recordsPerPage);
+          const totalItems = 12;
       
           const handlePageChange = (page) => {
               if (page >= 1 && page <= totalPages) {
@@ -29,6 +31,7 @@ const WordsContainer = ({path}) => {
           };
 
           const startIndex = (currentPage - 1) * recordsPerPage;
+          const currentItems = wordlist.slice(startIndex, startIndex + recordsPerPage);
 
     const handleRecordsPerPageChange = (e) => {
         setRecordsPerPage(Number(e.target.value));
@@ -39,7 +42,7 @@ const WordsContainer = ({path}) => {
   return (
     <section className="overflow-y-auto h-screen custom-scrollbar">
     <div className="flex  flex-wrap justify-evenly   gap-2">
-          {Wordlist?.map((word, index) => {
+          {currentItems.map((word, index) => {
             return (
               <div
                 className="  relative flex justify-between items-center border rounded-3xl  py-2 h-[80px] w-[32%] hover:border-[#FFC600] "
@@ -47,11 +50,11 @@ const WordsContainer = ({path}) => {
               >
                 <div className="flex gap-3 absolute">
                   <div className=" flex items-center justify-center ml-4 h-[45px] w-[45px] rounded-full bg-[#FFF1B2]">
-                    <img src={word.img} alt="" />
+                  {word.img ? <img src={word.img} alt="" /> : null}
                   </div>
                   <div className="flex justify-center items-center">
                     <div className=" bg-green-500-inter font-semibold text-2 ">
-                      {word.heading}
+                    {word.heading || word} {/* Support plain strings */}
                     </div>
                   </div>
                 </div>
@@ -145,7 +148,7 @@ const WordsContainer = ({path}) => {
           {/* END:: Pagination */}
           
         </div>
-        <div className="mb-44"></div>
+        <div className="mb-24"></div>
         </section>
   )
 }
