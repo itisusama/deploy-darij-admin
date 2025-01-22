@@ -8,7 +8,7 @@ const AddMiniGameFourManagement = () => {
     return (
         <>
             <section className="px-6 overflow-y-auto custom-scrollbar">
-        <div className='relative p-6 bg-white rounded-[30px] h-fit border overflow-hidden mb-60'>
+        <div className='relative p-6 bg-white rounded-[30px] h-fit border overflow-hidden mb-24'>
          <h2 className='font-inter font-[600] text-[24px]'>Add New</h2>
             <div className="mt-4">
                 <p className='font-inter text-[16px] font-[400]'>Number in Text <span className='text-red-600'>*</span></p>

@@ -41,7 +41,7 @@ const WordsContainer = ({path, customWordlist}) => {
     };
   return (
     <section className="overflow-y-auto h-screen custom-scrollbar">
-    <div className="flex  flex-wrap justify-evenly   gap-2">
+    <div className="flex overflow-hidden flex-wrap justify-evenly mb-[20rem] gap-2">
           {currentItems.map((word, index) => {
             return (
               <div
@@ -92,9 +92,9 @@ const WordsContainer = ({path, customWordlist}) => {
           {/* <div className="mt-32"><Pagination/>  </div> */}
 
           {/* START:: Pagination */}
-          <div className="flex flex-wrap sm:flex-nowrap justify-center sm:justify-between items-center mt-4 px-4 absolute bottom-2 left-0 sm:left-[230px] w-full gap-4">
+          <div className="bg-white flex flex-wrap sm:flex-nowrap justify-between sm:justify-between items-center absolute bottom-3 left-0 sm:left-[210px] w-[81%] gap-4">
               {/* Left Pagination Controls */}
-              <div className="flex gap-2 items-center justify-center sm:justify-start">
+              <div className="flex ml-4 mt-4 gap-2 items-between justify-between">
                               <button
                                   className="px-3 py-1 border rounded-md bg-gray-200 hover:bg-gray-300 disabled:bg-gray-100 disabled:cursor-not-allowed"
                                   onClick={() => handlePageChange(currentPage - 1)}
@@ -125,11 +125,11 @@ const WordsContainer = ({path, customWordlist}) => {
                           </div>
           
               {/* Records Per Page Dropdown */}
-              <div className="flex gap-2 items-center justify-center sm:justify-end">
+              <div className="ml-44 flex gap-2 items-center justify-center sm:justify-end">
                   <select
                           className="border rounded-md px-2 py-1 bg-white w-full sm:w-auto"
-                          // value={recordsPerPage}
-                          // onChange={handleRecordsPerPageChange}
+                          value={recordsPerPage}
+                          onChange={handleRecordsPerPageChange}
                       >
                           {[6, 8, 10, 12, 15, 20].map((count) => (
                               <option key={count} value={count}>
@@ -137,7 +137,7 @@ const WordsContainer = ({path, customWordlist}) => {
                               </option>
                           ))}
                       </select>
-                  <span className="text-sm sm:text-base">Items per page</span>
+                  <span className="text-sm sm:text-base float-right">Items per page</span>
               </div>
           
               {/* Item Range and Total */}
@@ -148,7 +148,7 @@ const WordsContainer = ({path, customWordlist}) => {
           {/* END:: Pagination */}
           
         </div>
-        <div className="mb-24"></div>
+        {/* <div className="mb-24"></div> */}
         </section>
   )
 }

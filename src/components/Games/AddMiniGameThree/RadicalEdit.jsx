@@ -48,7 +48,7 @@ const RadicalEdit = () => {
           </div>
         </div>
       </div>
-
+{/* 
       <div className="flex flex-row gap-3">
         
         {Iconword.map((item, index) => (
@@ -62,7 +62,7 @@ const RadicalEdit = () => {
             </div>
           </div>
         ))}
-      </div>
+      </div> */}
       
     </div>
   );

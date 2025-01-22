@@ -26,7 +26,7 @@ const GamesHeader = ({ title, path, onBack, onClick }) => {
     }
 
     return (
-        <div className="flex justify-between mx-4 my-8">
+        <div className="flex justify-between mx-4 mb-4">
             {/* First Half */}
             <div className="flex items-center">
                 <IoIosArrowRoundBack 

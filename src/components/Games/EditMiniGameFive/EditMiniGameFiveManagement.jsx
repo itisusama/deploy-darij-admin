@@ -3,6 +3,7 @@ import { IoMdAdd } from "react-icons/io";
 import { FaRegTrashAlt } from "react-icons/fa";
 import { IoIosAddCircleOutline } from "react-icons/io";
 import { IoVolumeHighOutline } from "react-icons/io5";
+import { Link } from 'react-router-dom';
 
 const EditMiniGameFiveManagement = () => {
   const [audioFile, setAudioFile] = useState(null);
@@ -127,8 +128,8 @@ const EditMiniGameFiveManagement = () => {
                   className="w-[28%] h-[44px] font-inter mx-8 px-3 border border-[#D0D5DD] rounded-lg pr-4"
                 >
                   <option value="Narrator">Narrator</option>
-                  <option value="Advance">Advance</option>
-                  <option value="Basic">Basic</option>
+                  <option value="Man">Man</option>
+                  <option value="Woman">Woman</option>
                 </select>
 
                 <div
@@ -191,9 +192,11 @@ const EditMiniGameFiveManagement = () => {
         </div>
 
         <div className="flex justify-end mt-5">
-          <button onClick={() => alert("Do you want to cancel the changes?")} className="w-[210px] h-[44px] mr-4 rounded-[100px] px-4 py-2 border border-[#FFC600] font-[600] text-[16px] leading-[24px] flex items-center justify-center space-x-2">
+          <Link to="/mini-game-five">
+          <button onClick={() => alert("Do you want to cancel the changes?")} className="w-[210px] h-[44px] mr-4 rounded-[100px] px-4 py-2 border border-black font-[600] text-[16px] leading-[24px] flex items-center justify-center space-x-2">
             Cancel
           </button>
+          </Link>
           <button onClick={() => alert("Changes Saved")} className="w-[210px] h-[44px] mr-4 rounded-[100px] px-4 py-2 bg-[#FFC600] font-[600] text-[16px] leading-[24px] flex items-center justify-center space-x-2">
             Save Changes
           </button>
