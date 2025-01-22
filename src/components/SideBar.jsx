@@ -126,7 +126,7 @@ const SideBar = ({ activeSection, setActiveSection }) => {
                     </li>
                   ))}
                   <li
-                    className="flex items-center absolute bottom-0 space-x-4 p-2 rounded-full cursor-pointer ml-9"
+                    className="flex items-center absolute bottom-4 space-x-4 p-2 rounded-full cursor-pointer ml-9"
                     onClick={() => setLogoutPopup(true)}
                   >
                     <img src={Logout} alt="Logout" className={`${isCollapsed ? "-ml-[30px]" : "w-6 h-6"}`} />
