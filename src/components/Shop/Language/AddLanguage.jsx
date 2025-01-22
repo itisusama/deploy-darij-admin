@@ -162,7 +162,7 @@ const AddLanguage = ({ handleClose, handleAdd }) => {
         <span className="text-red-500 text-sm">{errors.file}</span>
       )}
 
-      <div className="flex justify-end mt-48">
+      <div className="flex justify-end mt-32">
         <button
           onClick={handleAddLanguage}
           className="w-[179px] h-[44px] py-[10px] px-5 rounded-[100px] bg-[#FFC600] text-black font-inter font-[600] text-[14px] leading-6"

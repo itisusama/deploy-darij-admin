@@ -8,7 +8,7 @@ const UsersProfileManagement = () => {
     const { user } = location.state;
   return (
     <section className='flex flex-col h-screen overflow-hidden'>
-        <div className='bg-white rounded-lg p-4 overflow-y-auto flex-1 custom-scrollbar'>
+        <div className='bg-white rounded-lg p-2 overflow-y-auto flex-1 custom-scrollbar'>
             {/* START:: Top */}
             <div className='flex justify-between py-5'>
                 <div className='flex gap-3 items-center'>

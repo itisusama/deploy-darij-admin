@@ -118,7 +118,7 @@ const UsersTable = () => {
         navigate('/user-profile', { state: { user } });
     };
 
-    const [recordsPerPage, setRecordsPerPage] = useState(8); // Dynamic items per page
+    const [recordsPerPage, setRecordsPerPage] = useState(7); // Dynamic items per page
     const [currentPage, setCurrentPage] = useState(1);
     const [menuIndex, setMenuIndex] = useState(null);
     const [userChanged, setUserChanged] = useState(false);
@@ -127,7 +127,7 @@ const UsersTable = () => {
         if (window.innerHeight < 560) {
             setRecordsPerPage(6); // Adjust for smaller screens
         } else {
-            setRecordsPerPage(8); // Default value
+            setRecordsPerPage(7); // Default value
         }
     };
 
@@ -178,7 +178,7 @@ const UsersTable = () => {
     }, [userChanged]);
 
     const startIndex = (currentPage - 1) * recordsPerPage;
-    const visibleUsers = useData.slice(startIndex, startIndex + 8);
+    const visibleUsers = useData.slice(startIndex, startIndex + 7);
 
     const handleRecordsPerPageChange = (e) => {
         setRecordsPerPage(Number(e.target.value));
@@ -189,8 +189,8 @@ const UsersTable = () => {
 
 
   return (
-    <section className='mt-5 overflow-y-auto w-full'>
-        <div className="relative overflow-hidden rounded-[22px]">
+    <section className='mt-5 overflow-y-auto overflow-x-hidden h-screen w-full custom-scrollbar'>
+        <div className="relative overflow-x-hidden rounded-[22px] mb-60">
     <div className="overflow-x-auto">
         <table className="table-auto w-full text-left">
             <thead className="bg-[#fff1b2] text-[#000000]">
@@ -219,8 +219,8 @@ const UsersTable = () => {
                                 <h2 className="text-sm sm:text-base">{user.name}</h2>
                             </div>
                         </td>
-                        <td className="py-1 border p-4 text-sm sm:text-base">{user.email}</td>
-                        <td className="py-1 border p-4">
+                        <td className="py-1 border p-4 text-sm sm:text-base"  onClick={() => handleRowClick(user)}>{user.email}</td>
+                        <td className="py-1 border p-4"  onClick={() => handleRowClick(user)}>
                             <div className="flex">
                                 {user.languages.map((lang, index) => (
                                     <img
@@ -234,8 +234,8 @@ const UsersTable = () => {
                                 ))}
                             </div>
                         </td>
-                        <td className="py-1 border p-4 text-sm sm:text-base">{user.score}</td>
-                        <td className="py-1 border p-4 text-sm sm:text-base">
+                        <td className="py-1 border p-4 text-sm sm:text-base"  onClick={() => handleRowClick(user)}>{user.score}</td>
+                        <td className="py-1 border p-4 text-sm sm:text-base"  onClick={() => handleRowClick(user)}>
                             {user.subscription}
                         </td>
                         <td className="py-1 border p-4 relative">
@@ -247,14 +247,14 @@ const UsersTable = () => {
                             </div>
                             {menuIndex === index && (
                                 <div className="absolute right-7 top-8 bg-white border border-[#E1E5E8] rounded-lg shadow-md w-40 h-auto z-10">
-                                    <button className="block w-full text-left px-4 py-2 text-sm hover:bg-gray-100">
+                                    {/* <button className="block w-full text-left px-4 py-2 text-sm hover:bg-gray-100">
                                         <div className="flex gap-2">
                                             <img src={View} alt="view" />
                                             <p className="font-inter text-[14px] font-[400]">
                                                 View Profile
                                             </p>
                                         </div>
-                                    </button>
+                                    </button> */}
 
                                     <button className="block w-full text-left px-4 py-2 text-sm hover:bg-gray-100">
                                         <div className="flex gap-2">
@@ -284,9 +284,9 @@ const UsersTable = () => {
 </div>
 
 {/* START:: Pagination */}
-<div className="flex flex-wrap sm:flex-nowrap justify-center sm:justify-between items-center mt-4 absolute bottom-3 left-0 sm:left-[230px] w-full gap-4">
+<div className="bg-white flex flex-wrap sm:flex-nowrap justify-between sm:justify-between items-center absolute bottom-3 left-0 sm:left-[210px] w-[81%] gap-4">
     {/* Left Pagination Controls */}
-    <div className="flex gap-2 items-center justify-center sm:justify-start">
+    <div className="flex ml-4 mt-4 gap-2 items-between justify-between">
                     <button
                         className="px-3 py-1 border rounded-md bg-gray-200 hover:bg-gray-300 disabled:bg-gray-100 disabled:cursor-not-allowed"
                         onClick={() => handlePageChange(currentPage - 1)}
@@ -317,7 +317,7 @@ const UsersTable = () => {
                 </div>
 
     {/* Records Per Page Dropdown */}
-    <div className="flex gap-2 items-center justify-center sm:justify-end">
+    <div className="ml-44 flex gap-2 items-center justify-center sm:justify-end">
         <select
                 className="border rounded-md px-2 py-1 bg-white w-full sm:w-auto"
                 value={recordsPerPage}
@@ -329,7 +329,7 @@ const UsersTable = () => {
                     </option>
                 ))}
             </select>
-        <span className="text-sm sm:text-base">Items per page</span>
+        <span className="text-sm sm:text-base float-right">Items per page</span>
     </div>
 
     {/* Item Range and Total */}
@@ -338,7 +338,6 @@ const UsersTable = () => {
     </div>
 </div>
 {/* END:: Pagination */}
-
     </section>
   )
 }
