@@ -20,7 +20,7 @@ const Addword = () => {
         <div className=""> <Uploadwordimg/> </div>
 
         <div className="relative space-x-2 float-right mt-6">
-          <Link to="/word-learn">
+          <Link to="/learn">
           <button className="border  text-black font-bold py-2 px-4 rounded-full w-[210px] ">
           Cancel
           </button>
