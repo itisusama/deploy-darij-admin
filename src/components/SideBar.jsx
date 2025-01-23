@@ -86,7 +86,7 @@ const SideBar = ({ activeSection, setActiveSection }) => {
               >
                 {isCollapsed ? (
                   // <MdKeyboardArrowRight className="text-white mt-4 text-xl ml-[-20px]" />
-                  <img src={FrameOpen} alt="frame-open" className="mt-4"/>
+                  <img src={FrameOpen} alt="frame-open" className="mt-4 ml-[-0.5rem]"/>
                 ) : (
                   // <IoIosArrowBack className="text-white m-4 text-xl ml-[10px]" />
                   <img src={FrameClose} alt="frame-open" className="mt-4"/>
