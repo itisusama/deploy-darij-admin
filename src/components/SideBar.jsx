@@ -4,6 +4,8 @@ import { Link, useNavigate, useLocation } from "react-router-dom";
 import logo from "../assets/logo.svg";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { IoIosArrowBack } from "react-icons/io";
+import FrameClose from "../assets/frameclose.svg"
+import FrameOpen from "../assets/frameopen.svg"
 import { FaChevronDown } from "react-icons/fa";
 import Logout from "../assets/logout.png";
 
@@ -74,18 +76,20 @@ const SideBar = ({ activeSection, setActiveSection }) => {
       >
         <div className="max-h-full flex flex-col justify-between items-center text-xs">
           <div className="w-full">
-            <div className={`${isCollapsed ? "flex flex-col" : "flex justify-between px-9"}`}>
+            <div className={`${isCollapsed ? "" : "flex justify-between px-9"}`}>
               <div className={`${isCollapsed ? "hidden" : "w-16"} mt-[12px]`}>
                 <img src={logo} alt="" />
               </div>
               <div
-                className="h-[16px] w-[16px] -mt-4 relative ml-9 p-4 rounded-full cursor-pointer"
+                className="ml-6 cursor-pointer"
                 onClick={toggleSidebar}
               >
                 {isCollapsed ? (
-                  <MdKeyboardArrowRight className="text-white mt-4 text-xl ml-[-20px]" />
+                  // <MdKeyboardArrowRight className="text-white mt-4 text-xl ml-[-20px]" />
+                  <img src={FrameOpen} alt="frame-open" className="mt-4"/>
                 ) : (
-                  <IoIosArrowBack className="text-white bg-[#1a1a1a] rounded-full m-4 text-xl ml-[10px]" />
+                  // <IoIosArrowBack className="text-white m-4 text-xl ml-[10px]" />
+                  <img src={FrameClose} alt="frame-open" className="mt-4"/>
                 )}
               </div>
             </div>
