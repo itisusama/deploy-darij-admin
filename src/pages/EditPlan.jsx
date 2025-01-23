@@ -1,15 +1,16 @@
 import React from 'react';
 import LayoutWrapper from '../components/LayoutWrapper';
-import { Notification_Management } from '../components/Notification';
+import { EditPlan_Management } from '../components/Shop/EditPlan';
 
-const Notification = () => {
+
+const EditPlan = () => {
   return (
     <div>
     <LayoutWrapper>
-      <Notification_Management/>
+      <EditPlan_Management/>
     </LayoutWrapper>
     </div>
   )
 }
 
-export default Notification
+export default EditPlan

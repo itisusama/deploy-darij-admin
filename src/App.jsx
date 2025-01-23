@@ -13,6 +13,7 @@ import Settings from "./pages/Settings";
 import UsersProfile from "./pages/UsersProfile";
 import Plan from "./pages/Plan";
 import AddPlan from "./pages/AddPlan";
+import EditPlan from "./pages/EditPlan";
 import PromoCode from "./pages/PromoCode";
 import AddPromo from "./pages/AddPromo";
 import EditPromo from "./pages/EditPromo";
@@ -43,6 +44,7 @@ import AddProfessionalVersion from "./pages/AddProfessionalVersion";
 import EditWord from "./pages/EditWord";
 import AddNewMiniGameFive from "./pages/AddNewMiniGameFive";
 import EditNewMiniGameFive from "./pages/EditNewMiniGameFive";
+import Notification from "./pages/Notification";
 // import ProfessionalVersion from "./components/Games/MiniGameOne/ProfessionalVersion";
 
 const App = () => {
@@ -61,6 +63,7 @@ const App = () => {
                 <Route path="/user-profile" element={<ProtectedRoute component={UsersProfile} />}/>
                 <Route path="/plan" element={<ProtectedRoute component={Plan} />}/>
                 <Route path="/addplan" element={<ProtectedRoute component={AddPlan} />}/>
+                <Route path="/editplan" element={<ProtectedRoute component={EditPlan} />}/>
                 <Route path="/promo-code" element={<ProtectedRoute component={PromoCode} />}/>
                 <Route path="/addpromo" element={<ProtectedRoute component={AddPromo} />}/>
                 <Route path="/editpromo" element={<ProtectedRoute component={EditPromo} />}/>
@@ -90,7 +93,7 @@ const App = () => {
                 <Route path="/edit_word" element={<ProtectedRoute component={EditWord} />}/>
                 <Route path="/add-new-minigamefive" element={<ProtectedRoute component={AddNewMiniGameFive} />}/>
                 <Route path="/edit-new-minigamefive" element={<ProtectedRoute component={EditNewMiniGameFive} />}/>
-
+                <Route path="/notification" element={<ProtectedRoute component={Notification} />}/>
                 {/* <Route path="/Games/miniGameOne/ProfessionalVersion" element={<ProfessionalVersion />} /> */}
             </Routes>
         </Router>
