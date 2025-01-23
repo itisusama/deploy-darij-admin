@@ -1,10 +1,10 @@
 import React from 'react'
-import AddPlan from '@/components/Shop/PlanComponents/AddPlan'
+import EditPlan from '../PlanComponents/EditPlan'
 
 const EditPlanManagement = () => {
   return (
     <div>
-      <AddPlan/>
+      <EditPlan/>
     </div>
   )
 }

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Banner from "../../assets/Banner.jpg";
 import Threedot from "../../assets/Threedot.svg";
 // import Update_banner from "./Update_banner";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const bannerItems = [
   {
@@ -33,6 +33,15 @@ const bannerItems = [
 
 const Add_banner = () => {
   const [compChange, setChangeComp] = useState(false);
+  const [dropdownVisible, setDropdownVisible] = useState(null);
+  const toggleDropdown = (id) => {
+    setDropdownVisible((prev) => (prev === id ? null : id));
+  };
+
+  const handleDelete = (banItem) => {
+    console.log(`Delete banner: ${banItem}`);
+    alert("Do you want to delete?")
+  };
   return (
     <div className="">
       <div className=" flex justify-between py-2">
@@ -74,8 +83,20 @@ const Add_banner = () => {
                   <img
                     src={item.icon}
                     alt=""
-                    className="absolute right-4  cursor-pointer "
+                    className="absolute right-6 top-4 cursor-pointer w-[14px] h-[14px]"
+                    onClick={() => toggleDropdown(item.id)}
                   />
+                  {/* Dropdown Menu */}
+              {dropdownVisible === item.id && (
+                <div className="absolute top-8 right-0 w-fit bg-white border rounded-lg shadow-md z-10">
+                  <button
+                    onClick={() => handleDelete(item.banItems)}
+                    className="w-full px-4 py-2 text-left hover:bg-gray-100 text-red-500"
+                  >
+                    Delete
+                  </button>
+                </div>
+              )}
                 </div>
               </div>
             );

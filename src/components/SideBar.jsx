@@ -34,11 +34,17 @@ const SideBar = ({ activeSection, setActiveSection }) => {
       setActiveSection(savedTitle);
     }
   }, [location, setActiveSection]);
-
+  
+  const [logoutPopup, setLogoutPopup] = useState(false);
+  
   const handleLogOut = () => {
     localStorage.removeItem("access_token");
     localStorage.clear("title");
     navigate("/");
+  };
+
+  const toggleLogoutPopup = () => {
+    setShowPopup(!showPopup);
   };
 
   const handleTabClick = (title, id, route) => {
@@ -134,6 +140,29 @@ const SideBar = ({ activeSection, setActiveSection }) => {
                       <span className="text-white font-inter font-[400] text-[16px]">Logout</span>
                     )}
                   </li>
+                  {logoutPopup && (
+                    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-40">
+                      <div className="bg-white rounded-lg shadow-lg px-10 sm:px-14 py-6 sm:py-8">
+                        <p className="mb-4 text-lg sm:text-xl text-[#19191A] font-medium text-center">
+                          Are you sure you want to <br /> logout?
+                        </p>
+                        <div className="flex justify-center gap-5 sm:gap-7 pt-4">
+                          <button
+                            className="px-6 sm:px-8 py-2 text-[#19191A] rounded-md border border-gray-300"
+                            onClick={() => setLogoutPopup(false)}
+                          >
+                            No
+                          </button>
+                          <button
+                            className="px-6 sm:px-8 py-2 bg-[#ffd200] text-white rounded-md"
+                            onClick={handleLogOut}
+                          >
+                            Yes
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  )}
                 </ul>
               </div>
             </div>

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 // import { usePolicyContext } from "../Hooks/AddpolicyContext";
 import UserProfile from "../assets/Group.svg";
 import Notification from "../assets/Notification.svg";
@@ -24,6 +24,9 @@ const Header = () => {
           break;
         case "/addplan":
           title = "Shop / Add Plan";
+          break;
+        case "/editplan":
+          title = "Shop / Edit Plan";
           break;
         case "/promo-code":
           title = "Shop";
@@ -121,6 +124,9 @@ const Header = () => {
         case "/addbanner":
           title = "Settings";
           break;
+        case "/notification":
+          title = "Notification";
+          break;
         default:
           title = "Default Title";
           break;
@@ -140,7 +146,7 @@ return (
         <div className="relative cursor-pointer">
           <img src={Notification} alt=" icon" />
         </div>
-        
+        <Link to="/settings">
         <div
           className="w-10 h-10 rounded-full overflow-hidden cursor-pointer">
           <img
@@ -149,6 +155,7 @@ return (
             className="w-full h-full object-cover"
           />
         </div>
+        </Link>
       </div>
 
       </div>

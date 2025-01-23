@@ -37,12 +37,13 @@ const NotificationItems = [
 const Notificationalert = () => {
   return (
     <>
-      <div className="font-semibold font-inter text-2xl m-5">Notifications</div>
+      <div className="font-[600] font-inter text-[16px] m-5">Notifications</div>
 
+      <section className="overflow-y-auto h-screen custom-scrollbar">
       <div className="mx-5">
         {NotificationItems.map((item) => (
           <div
-            className="flex justify-between h-[90px] p-2 m-2  bg-slate-100 items-center rounded-3xl"
+            className="flex justify-between h-[90px] p-2 m-2  bg-[#ffffff] items-center rounded-3xl"
             key={item.id}
           >
             <div>
@@ -52,12 +53,14 @@ const Notificationalert = () => {
               <div className="text-[#7A798A] text-xs">{item.time}</div>
             </div>
 
-            <div>
-              <img src={item.img} alt="options" className="" />
-            </div>
+            {/* <div>
+              <img src={item.img} alt="options" className="w-[14px] h-[14px] cursor-pointer" />
+            </div> */}
           </div>
         ))}
       </div>
+      <div className="mb-24"></div>
+      </section>
     </>
   );
 };

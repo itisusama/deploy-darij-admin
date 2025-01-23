@@ -81,12 +81,12 @@ const Planlist = () => {
                     />
                     {dropdownVisible === index && (
                         <div className="absolute top-8 right-0 w-32 bg-white border rounded-lg shadow-md z-10">
-                            {/* <button
-                                onClick={() => handleEdit(plan.title)}
+                            <button
+                                onClick={() => navigate("/editplan", { state: { plan: plans[index] } })}
                                 className="w-full px-4 py-2 text-left hover:bg-gray-100"
                             >
                                 Edit
-                            </button> */}
+                            </button>
                             <button
                                 onClick={() => handleDelete(plan.title)}
                                 className="w-full px-4 py-2 text-left hover:bg-gray-100 text-red-500"
