@@ -143,9 +143,11 @@ return (
         </div>
 
         <div className="flex items-center justify-end space-x-6 mr-7">
+        <Link to="/notification">
         <div className="relative cursor-pointer">
           <img src={Notification} alt=" icon" />
         </div>
+        </Link>
         <Link to="/settings">
         <div
           className="w-10 h-10 rounded-full overflow-hidden cursor-pointer">
