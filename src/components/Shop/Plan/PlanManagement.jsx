@@ -5,7 +5,7 @@ import Planlist from '@/components/Shop/PlanComponents/PlanList'
 
 const PlanManagement = () => {
     return (
-        <div className='px-4'>
+        <div className='px-4 custom-scrollbar'>
             {/* ShopHeader and Button */}
             <div className="flex justify-between">
                 <ShopHeader />
