@@ -259,7 +259,7 @@ const UsersTable = () => {
                                     <button className="block w-full text-left px-4 py-2 text-sm hover:bg-gray-100">
                                         <div className="flex gap-2">
                                             <img src={Cancel} alt="block" />
-                                            <p className="font-inter text-[14px] font-[400]">
+                                            <p className="font-inter text-[14px] font-[400]" onClick={()=>alert("Comming Soon")}>
                                                 Block User
                                             </p>
                                         </div>
@@ -268,7 +268,7 @@ const UsersTable = () => {
                                     <button className="block w-full text-left px-4 py-2 text-sm hover:bg-gray-100">
                                         <div className="flex gap-2">
                                             <img src={Delete} alt="delete" />
-                                            <p className="font-inter text-[14px] font-[400]">
+                                            <p className="font-inter text-[14px] font-[400]" onClick={()=>alert("Comming Soon")}>
                                                 Delete
                                             </p>
                                         </div>
