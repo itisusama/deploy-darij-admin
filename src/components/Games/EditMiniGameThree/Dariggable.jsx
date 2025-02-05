@@ -16,14 +16,14 @@ const Dariggable = () => {
             className="w-full px-3 py-2 border text-black rounded-md focus:outline-none focus:ring-1 focus:ring-black-500"
             
           />
-          <button className="w-[143px] h-[40px] flex justify-center items-center border-2 border-yellow-500 bg-[#FFF1B2] rounded">
+          <button className="w-[143px] h-[40px] flex justify-center items-center border-2 border-yellow-500 bg-[#FFF1B2] rounded" onClick={()=> alert("Functionality will be added soon")}>
             Add New Card
           </button>
         </div>
 
         <div className="flex flex-row gap-3">
           {Iconword.map((item, index) => (
-            <div className="flex flex-row   mt-3" key={index}>
+            <div className="flex flex-row cursor-pointer mt-3" key={index}>
               <div className=" flex border rounded-lg bg-[#FFF1B2] w-[76px] h-[28px] justify-center items-center gap-2 ">
                 <div className="">
                   {" "}
