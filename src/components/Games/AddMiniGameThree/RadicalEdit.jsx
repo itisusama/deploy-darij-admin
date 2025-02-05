@@ -6,7 +6,7 @@ const RadicalEdit = () => {
   return (
     <div className=" mt-8">
       <label htmlFor="firstName" className="text-[#000000]">
-        Radical
+        Text in French
       </label>
       <div className=" flex gap-5">
         <div className=" space-y-5">
@@ -15,7 +15,8 @@ const RadicalEdit = () => {
               type="text"
               id="text"
               className="w-[141px] px-3 py-2 border-dashed border text-black border-black rounded-md focus:outline-none focus:ring-1"
-              placeholder="Enter Prifix"
+              placeholder=""
+              readOnly
             />
           </div>
           <div className="">
@@ -38,7 +39,8 @@ const RadicalEdit = () => {
             <input
               type="text"
               className="w-[141px] px-3 py-2 border-dashed border border-black text-black rounded-md focus:outline-none focus:ring-1"
-              placeholder="Enter Sufix"
+              placeholder=""
+              readOnly
             />
           </div>
           <div className="">
@@ -48,11 +50,11 @@ const RadicalEdit = () => {
           </div>
         </div>
       </div>
-{/* 
+
       <div className="flex flex-row gap-3">
         
         {Iconword.map((item, index) => (
-          <div className="flex flex-row  mt-7" key={index}>
+          <div className="flex flex-row cursor-pointer mt-7" key={index} onClick={()=> alert("Functionality will be added soon")}>
             <div className=" flex border rounded-lg w-[57px] h-[28px] justify-center items-center gap-2 ">
               <div className="">
                 {" "}
@@ -62,7 +64,7 @@ const RadicalEdit = () => {
             </div>
           </div>
         ))}
-      </div> */}
+      </div>
       
     </div>
   );
