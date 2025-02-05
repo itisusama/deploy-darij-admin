@@ -85,7 +85,7 @@ const EditGameVersionManagement = () => {
                 className="w-full p-2 rounded-md border"
               />
             </div>
-            
+
             <div className="w-[50%]">
               <label
                 htmlFor="word-select"
@@ -108,12 +108,14 @@ const EditGameVersionManagement = () => {
           </div>
           {/* START:: Buttons */}
           <div>
-            <button
-                onClick={() => navigate('/mini-game-two')}
+            <Link to="/mini-game-two">
+              <button
+                // onClick={handleNextClick}
                 className="absolute right-[18rem] bottom-11 rounded-full bg-transparent border border-black py-[10px] px-[80px] text-[16px] font-inter font-[600]"
-            >
+              >
                 Cancel
-            </button>
+              </button>
+            </Link>
             <button
               onClick={() => alert("functionality will be added soon")}
               className="absolute right-11 bottom-11 rounded-full bg-[#ffc500] border border-[#ffc500] py-[10px] px-[80px] text-[16px] font-inter font-[600]"
