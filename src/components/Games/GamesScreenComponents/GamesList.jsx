@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import Shipments from "../../../assets/Shipments.svg";
@@ -44,27 +45,27 @@ const GamesList = () => {
         { 
             name: 'Mini Game 1', 
             para: `Tap on the card that you believe matches the word's meaning or represents the correct option.`,
-            path: "/mini-game-version" 
+            path: "/mini-game-two" 
         },
         { 
             name: 'Mini Game 2', 
             para: `Start by reading the description above. It contains valuable insights or context for the mini-game.`,
-            path: "/mini-game-version" 
+            path: "/mini-game-two" 
           },
           { 
             name: 'Mini Game 3', 
             para: `Press and hold a word from the options below, then drag it to the appropriate blank space.`,
-            path: "/mini-game-version" 
+            path: "/mini-game-two" 
           },
           { 
             name: 'Mini Game 4', 
             para: `Ensure the number matches what you heard in the audio.And write in a giving space and click into the tick mark.`,
-            path: "/mini-game-version" 
+            path: "/mini-game-two" 
           },
           { 
             name: 'Mini Game 5', 
             para: `Add a specific dialogue and according to selected dialogue add a different translation options`,
-            path: "/mini-game-version" 
+            path: "/mini-game-two" 
           },
       ];
 
