@@ -50,22 +50,22 @@ const Header = () => {
           title = "Games";
           break;
         case "/mini-game-two":
-          title = "Games";
+          title = "Games/ Mini Game";
           break;
         case "/edit-game-version":
-          title = name ? `Games` : "Games";
+          title = "Games/ Mini Game";
           break;
         case "/edit-professional-version":
-          title = name ? `Games` : "Games";
+          title = "Games/ Mini Game";
           break;
         case "/add-professional-version":
-          title = name ? `Games` : "Games";
+          title = "Games/ Mini Game";
           break;
         case "/add-game-version":
-          title = name ? `Games` : "Games";
+          title = "Games/ Mini Game";
           break;
         case "/professional-version":
-          title = name ? `Games` : "Games";
+          title = "Games/ Mini Game";
           break;
         case "/mini-game-three":
           title = "Games / Mini Game 3";
