@@ -76,33 +76,39 @@ const GameVersions = () => {
             <div>
               <p className="text-[12px] font-inter font-[400] text-[#626262]">{version.tag}</p>
               <div
-                onClick={(e) => e.stopPropagation()} // Stop click from propagating to the parent
-              >
-                <FontAwesomeIcon
-                  className="text-[16px] font-inter font-[400] text-[#626262] absolute top-7 right-7"
-                  icon={faEllipsisVertical}
-                  onClick={() => toggleMenu(index)}
-                />
-                {menuIndex === index && (
-                  <div className="absolute right-4 top-12 bg-white border border-[#E1E5E8] rounded-lg shadow-md w-[67px] h-[75px] z-50">
-                    <button
-                      className="block w-full text-left px-4 py-2 text-sm hover:bg-gray-100"
-                      onClick={(e) => {
-                        e.stopPropagation(); // Prevent click propagation
-                        navigate("/edit-game-version", { state: { version, name } });
-                      }}
+                  onClick={(e) => e.stopPropagation()} // Stop click from propagating to the parent
+                  className="text-[16px] font-inter font-[400] text-[#626262] absolute cursor-pointer top-0 right-0 py-5 px-7"
+                >
+                  <FontAwesomeIcon 
+                    icon={faEllipsisVertical}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      toggleMenu(index);
+                    }}
+                  />
+                  {menuIndex === index && (
+                    <div className="absolute right-2 top-12 bg-white border border-[#E1E5E8] rounded-lg shadow-md w-[67px] h-[75px]"
                     >
-                      Edit
-                    </button>
-                    <button
-                      className="block text-[#FF3B30] w-full text-left px-4 py-2 text-sm hover:bg-gray-100"
-                      // onClick={() => alert(`Delete clicked for ${version.name}`)}
-                    >
-                      Delete
-                    </button>
-                  </div>
-                )}
-              </div>
+                      <button
+                        className="block w-full text-left px-4 py-2 text-sm hover:bg-gray-100"
+                        onClick={(e) => {
+                          e.stopPropagation(); // Prevent click propagation
+                          navigate("/edit-game-version", {
+                            state: { version, name },
+                          });
+                        }}
+                      >
+                        Edit
+                      </button>
+                      <button
+                        className="block text-[#FF3B30] w-full text-left px-4 py-2 text-sm hover:bg-gray-100"
+                        onClick={() => alert("Functionality Comming Soon")}
+                      >
+                        Delete
+                      </button>
+                    </div>
+                  )}
+                </div>
             </div>
           </div>
         ))}
