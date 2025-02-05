@@ -6,8 +6,9 @@ import Notification from "../assets/Notification.svg";
 
 const Header = () => {
     const location = useLocation();
-    const { name } = location.state || {};
+    // const { name } = location.state || {};
     let title = "";
+    const name = localStorage.getItem("name");
 
     switch (location.pathname) {
         case "/dashboard":
@@ -50,22 +51,22 @@ const Header = () => {
           title = "Games";
           break;
         case "/mini-game-two":
-          title = "Games/ Mini Game";
+          title = `Games/ ${name}`;
           break;
         case "/edit-game-version":
-          title = "Games/ Mini Game";
+          title = `Games/ ${name}`;
           break;
         case "/edit-professional-version":
-          title = "Games/ Mini Game";
+          title = "Games/ Mini Game 2";
           break;
         case "/add-professional-version":
-          title = "Games/ Mini Game";
+          title = "Games/ Mini Game 2";
           break;
         case "/add-game-version":
-          title = "Games/ Mini Game";
+          title = `Games/ ${name}`;
           break;
         case "/professional-version":
-          title = "Games/ Mini Game";
+          title = "Games/ Mini Game 2";
           break;
         case "/mini-game-three":
           title = "Games / Mini Game 3";
