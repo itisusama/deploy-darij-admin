@@ -88,8 +88,8 @@ const ProfessionalVersionManagement = () => {
               <div className="mt-4 w-[60%] flex gap-2">
                 <img src={pv.channelvideo} alt="channel-video" className="w-[126px] h-[77px] rounded-[24px]" />
                 <div>
-                  <p className="font-inter text-[16px] font-[600]">{pv.videotitle}</p>
-                  <div className="flex gap-2">
+                  {/* <p className="font-inter text-[16px] font-[600]">{pv.videotitle}</p> */}
+                  <div className="flex gap-2 mt-5">
                     <img src={ ChannelIcon} alt="channel-icon" className="w-[40px] h-[40px] rounded-full" />
                     <div className="flex flex-col">
                       <p className="font-inter text-[#3C3C3B] text-[14px]">channel Name</p>
