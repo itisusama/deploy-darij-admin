@@ -22,7 +22,7 @@ const GamesHeader = ({ title, path, onBack, onClick }) => {
     };
 
     const handleBack = () => {
-        navigate("/mini-game-two");
+        navigate(onBack);
     }
 
     return (
