@@ -1,46 +1,73 @@
 import React from "react";
-import  RadicalEdit from "./RadicalEdit"
-import Dariggable from "./Dariggable"
-import { Link } from "react-router-dom";
+import { Iconword } from "../../../Data/Iconword";
+import { Icon } from "@mui/material";
 
-const AddMiniGameThreeManagement = () => {
+const RadicalEdit = () => {
   return (
-    <div className="overflow-y-auto h-screen custom-scrollbar">
-      <div className="border rounded-3xl border-[#E1E5E8] p-5 m-3">
-        <div className=" font-semibold font-inter text-black text-2xl ">
-          Add New
+    <div className=" mt-8">
+      <label htmlFor="firstName" className="text-[#000000]">
+        Text in French
+      </label>
+      <div className=" flex gap-5">
+        <div className=" space-y-5">
+          <div className="">
+            <input
+              type="text"
+              id="text"
+              className="w-[141px] px-3 py-2 border-dashed border text-black border-black rounded-md focus:outline-none focus:ring-1"
+              placeholder=""
+              readOnly
+            />
+          </div>
+          <div className="">
+            <button className=" text-black font-semibold font-inter h-[44px] w-[64px] mr-1 rounded-lg  bg-yellow-400 hover:bg-yellow-600 justify-between items-end  ">
+              Stuck
+            </button>
+          </div>
         </div>
 
-        <div className=" mt-9">
-          <label htmlFor="firstName" className="text-[#000000]">
-            Phrase <span className="text-red-500">*</span>
-          </label>
+        <div className="">
           <input
             type="text"
-            className="w-full px-3 py-2 border text-black rounded-md focus:outline-none focus:ring-1 focus:ring-black-500"
-            placeholder="Enter the phrase"
+            className="w-[247px] px-3 py-2 border text-black rounded-md focus:outline-none focus:ring-1"
+            placeholder="Enter the radical"
           />
         </div>
-        < RadicalEdit/>
-        <Dariggable/>
 
-        {/* BUTTIONS  */}
-        <div className="relaive right-0 space-x-2 float-right mt-12">
-          <Link to="/mini-game-three">
-          <button className="border  text-black font-bold py-2 px-4 rounded-full w-[210px] ">
-          Cancel
-          </button>
-          </Link>
-          
-          <button className="border bg-yellow-400 text-black font-bold py-2 px-4 rounded-full hover:bg-yellow-500 w-[210px] ">
-            Add 
-          </button>
+        <div className="space-y-5">
+          <div className="">
+            <input
+              type="text"
+              className="w-[141px] px-3 py-2 border-dashed border border-black text-black rounded-md focus:outline-none focus:ring-1"
+              placeholder=""
+              readOnly
+            />
+          </div>
+          <div className="">
+            <button className=" text-black font-semibold font-inter h-[44px] w-[64px] mr-1 rounded-lg border  hover:bg-yellow-600  justify-between items-end  ">
+              Stuck
+            </button>
+          </div>
         </div>
-
       </div>
-      <div className="mb-44"></div>
+
+      <div className="flex flex-row gap-3">
+        
+        {Iconword.map((item, index) => (
+          <div className="flex flex-row cursor-pointer mt-7" key={index} onClick={()=> alert("Functionality will be added soon")}>
+            <div className=" flex border rounded-lg w-[57px] h-[28px] justify-center items-center gap-2 ">
+              <div className="">
+                {" "}
+                <img src={item.icon} alt="" />
+              </div>
+              <div className=" text-black font-inter ">{item.text}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+      
     </div>
   );
 };
 
-export default AddMiniGameThreeManagement;
+export default RadicalEdit;
