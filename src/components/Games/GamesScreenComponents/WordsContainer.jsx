@@ -41,7 +41,7 @@ const WordsContainer = ({path, customWordlist}) => {
     };
   return (
     <section className="overflow-y-auto h-screen custom-scrollbar">
-    <div className="flex overflow-hidden flex-wrap justify-evenly mb-[20rem] gap-2">
+    <div className="flex flex-wrap justify-evenly mb-[20rem] gap-2">
           {currentItems.map((word, index) => {
             return (
               <div
