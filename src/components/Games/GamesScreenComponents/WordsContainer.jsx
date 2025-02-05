@@ -91,61 +91,64 @@ const WordsContainer = ({path, customWordlist}) => {
           })}
           {/* <div className="mt-32"><Pagination/>  </div> */}
 
-          {/* START:: Pagination */}
-          <div className="bg-white flex flex-wrap sm:flex-nowrap justify-between sm:justify-between items-center absolute bottom-3 left-0 sm:left-[210px] w-[81%] gap-4">
-              {/* Left Pagination Controls */}
-              <div className="flex ml-4 mt-4 gap-2 items-between justify-between">
-                              <button
-                                  className="px-3 py-1 border rounded-md bg-gray-200 hover:bg-gray-300 disabled:bg-gray-100 disabled:cursor-not-allowed"
-                                  onClick={() => handlePageChange(currentPage - 1)}
-                                  disabled={currentPage === 1}
-                              >
-                                  <img src={Left} alt="left-icon" className="w-6 h-6" />
-                              </button>
-                              {[...Array(totalPages).keys()].map((page) => (
-                                  <button
-                                      key={page}
-                                      className={`px-3 py-1 border rounded-md ${
-                                          currentPage === page + 1
-                                              ? "bg-black text-white"
-                                              : "bg-gray-200 hover:bg-gray-300"
-                                      }`}
-                                      onClick={() => handlePageChange(page + 1)}
-                                  >
-                                      {page + 1}
-                                  </button>
-                              ))}
-                              <button
-                                  className="px-3 py-1 border rounded-md bg-gray-200 hover:bg-gray-300 disabled:bg-gray-100 disabled:cursor-not-allowed"
-                                  onClick={() => handlePageChange(currentPage + 1)}
-                                  disabled={currentPage === totalPages}
-                              >
-                                  <img src={Right} alt="right-icon" className="w-6 h-6" />
-                              </button>
-                          </div>
-          
-              {/* Records Per Page Dropdown */}
-              <div className="ml-44 flex gap-2 items-center justify-center sm:justify-end">
-                  <select
-                          className="border rounded-md px-2 py-1 bg-white w-full sm:w-auto"
-                          value={recordsPerPage}
-                          onChange={handleRecordsPerPageChange}
-                      >
-                          {[6, 8, 10, 12, 15, 20].map((count) => (
-                              <option key={count} value={count}>
-                                  {count}
-                              </option>
-                          ))}
-                      </select>
-                  <span className="text-sm sm:text-base float-right">Items per page</span>
-              </div>
-          
-              {/* Item Range and Total */}
-              <div className="text-gray-600 text-center sm:text-right">
-                  {startIndex + 1} - {Math.min(startIndex + recordsPerPage, totalItems)} of {totalItems} items
-              </div>
-          </div>
-          {/* END:: Pagination */}
+         {/* START:: Pagination */}
+               <div className="bg-white flex flex-wrap sm:flex-nowrap justify-between sm:justify-between items-center absolute bottom-0 pb-3 left-0 sm:left-[210px] w-screen gap-4">
+                 {/* Left Pagination Controls */}
+                 <div className="flex ml-4 mt-4 gap-2 items-between justify-between">
+                   <button
+                     className="px-3 py-1 border rounded-md bg-gray-200 hover:bg-gray-300 disabled:bg-gray-100 disabled:cursor-not-allowed"
+                     onClick={() => handlePageChange(currentPage - 1)}
+                     disabled={currentPage === 1}
+                   >
+                     <img src={Left} alt="left-icon" className="w-6 h-6" />
+                   </button>
+                   {[...Array(totalPages).keys()].map((page) => (
+                     <button
+                       key={page}
+                       className={`px-3 py-1 border rounded-md ${
+                         currentPage === page + 1
+                           ? "bg-black text-white"
+                           : "bg-gray-200 hover:bg-gray-300"
+                       }`}
+                       onClick={() => handlePageChange(page + 1)}
+                     >
+                       {page + 1}
+                     </button>
+                   ))}
+                   <button
+                     className="px-3 py-1 border rounded-md bg-gray-200 hover:bg-gray-300 disabled:bg-gray-100 disabled:cursor-not-allowed"
+                     onClick={() => handlePageChange(currentPage + 1)}
+                     disabled={currentPage === totalPages}
+                   >
+                     <img src={Right} alt="right-icon" className="w-6 h-6" />
+                   </button>
+                 </div>
+         
+                 {/* Records Per Page Dropdown */}
+                 <div className="ml-44 flex gap-2 items-center justify-center sm:justify-end">
+                   <select
+                     className="border rounded-md px-2 py-1 bg-white w-full sm:w-auto"
+                     value={recordsPerPage}
+                     onChange={handleRecordsPerPageChange}
+                   >
+                     {[6, 8, 10, 12, 15, 20].map((count) => (
+                       <option key={count} value={count}>
+                         {count}
+                       </option>
+                     ))}
+                   </select>
+                   <span className="text-sm sm:text-base float-right">
+                     Items per page
+                   </span>
+                 </div>
+         
+                 {/* Item Range and Total */}
+                 <div className="text-gray-600 text-center sm:text-right">
+                   {startIndex + 1} - {Math.min(startIndex + recordsPerPage, totalItems)}{" "}
+                   of {totalItems} items
+                 </div>
+               </div>
+               {/* END:: Pagination */}
           
         </div>
         {/* <div className="mb-24"></div> */}
