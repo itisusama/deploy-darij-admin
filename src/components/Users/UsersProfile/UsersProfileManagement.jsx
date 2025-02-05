@@ -9,7 +9,6 @@ const UsersProfileManagement = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const handleStatsClick = (index) => {
       setActiveIndex(index);
-      alert("Stats are coming soon!");
 };
   return (
     <section className="flex flex-col h-screen overflow-hidden">
