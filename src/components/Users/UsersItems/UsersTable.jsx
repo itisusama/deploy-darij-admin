@@ -293,16 +293,16 @@ const UsersTable = ({ searchQuery }) => {
                           </div>
                         </button>
 
-                        <button className="block w-full text-left px-4 py-2 text-sm hover:bg-gray-100">
+                        <button className="block w-full text-left px-4 py-2 text-sm hover:bg-gray-100" onClick={()=>alert("Comming Soon")}>
                           <div className="flex gap-2">
                             <img src={Cancel} alt="block" />
-                            <p className="font-inter text-[14px] font-[400]" onClick={()=>alert("Comming Soon")}>
+                            <p className="font-inter text-[14px] font-[400]">
                               Block User
                             </p>
                           </div>
                         </button>
 
-                        <button className="block w-full text-left px-4 py-2 text-sm hover:bg-gray-100">
+                        <button className="block w-full text-left px-4 py-2 text-sm hover:bg-gray-100" onClick={()=>alert("Comming Soon")}>
                           <div className="flex gap-2">
                             <img src={Delete} alt="delete" />
                             <p className="font-inter text-[14px] font-[400]">

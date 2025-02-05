@@ -8,7 +8,8 @@ const UsersManagement = () => {
   return (
     <div>
       <TopBar searchQuery={searchQuery} setSearchQuery={setSearchQuery}/>
-      <UsersTable searchQuery={searchQuery}/>
+      <UsersTable/>
+      {/* searchQuery={searchQuery} */}
     </div>
   )
 }
