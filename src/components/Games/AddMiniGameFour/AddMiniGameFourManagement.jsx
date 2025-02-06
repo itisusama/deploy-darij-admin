@@ -37,7 +37,7 @@ const AddMiniGameFourManagement = () => {
                         Add Audio
                       </p>
                     </div>
-                    <svg
+                    {/* <svg
                       width="128"
                       height="120"
                       viewBox="0 0 128 120"
@@ -65,7 +65,7 @@ const AddMiniGameFourManagement = () => {
                           fill="white"
                         />
                       </g>
-                    </svg>
+                    </svg> */}
                     <input
                       type="file"
                       id="fileInput"
