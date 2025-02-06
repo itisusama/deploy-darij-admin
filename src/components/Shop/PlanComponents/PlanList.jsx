@@ -18,7 +18,7 @@ const Planlist = () => {
 
     const handleDelete = (plan) => {
         setDropdownVisible(null); 
-        alert(`Delete clicked for: ${plan}`);
+        alert("Functionality will be added soon");
     };
 
     const plans = [
