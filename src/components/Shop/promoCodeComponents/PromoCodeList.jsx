@@ -63,7 +63,7 @@ const PromoCodeList = () => {
                                         </button>
                                         <button
                                             className="block text-[#FF3B30] w-full text-left px-4 py-2 text-sm hover:bg-gray-100"
-                                            onClick={() => alert(`Delete clicked for ${code.promoId}`)}
+                                            onClick={() => alert("Functionality will be added soon")}
                                         >
                                             Delete
                                         </button>

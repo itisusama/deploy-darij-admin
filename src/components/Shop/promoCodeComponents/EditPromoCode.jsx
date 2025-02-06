@@ -1,8 +1,31 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 
 const EditPromoCode = () => {
     const navigate = useNavigate();
+    const [selectedLanguages, setSelectedLanguages] = useState([]);
+    const [selectedPlan, setSelectedPlan] = useState([]);
+
+    const handleLanguageChange = (event) => {
+      const selectedValue = event.target.value;
+  
+      setSelectedLanguages((prevLanguages) => {
+        return prevLanguages.includes(selectedValue)
+          ? prevLanguages.filter((lang) => lang !== selectedValue)
+          : [...prevLanguages, selectedValue];
+      });
+    };
+
+    const handlePlanChange = (event) => {
+      const selectedValue = event.target.value;
+  
+      setSelectedPlan((prevPlan) => {
+        return prevPlan.includes(selectedValue)
+          ? prevPlan.filter((plan) => plan !== selectedValue)
+          : [...prevPlan, selectedValue];
+      });
+    };
+
     return (
       <section className='h-screen overflow-y-auto overflow-x-hidden custom-scrollbar'>
         <div className='w-full h-fit bg-white border border-[#E1E5E8] rounded-[30px]'>
@@ -41,13 +64,19 @@ const EditPromoCode = () => {
       <select
         id="subscription"
         className="mt-2 w-full h-[44px] bg-white text-black placeholder:text-[#D0D5DD] border border-[#D0D5DD] rounded-[8px] pl-[14px] focus:outline-none font-[400] text-[16px] leading-[24px]"
+        value={selectedPlan}
+        onChange={handlePlanChange}
       >
         <option value="Lifetime">Lifetime</option>
         <option value="Yearly">Yearly</option>
         <option value="Monthly">Monthly</option>
         <option value="Weekly">Weekly</option>
       </select>
+      <div className="mt-2 text-[16px] text-green-700">
+         {selectedPlan.join(", ")}
+      </div>
     </div>
+    
   </div>
 
   {/* Second Row */}
@@ -62,13 +91,18 @@ const EditPromoCode = () => {
       </label>
       <select
         id="language"
-        className="mt-2 w-full h-[44px] bg-white text-black placeholder:text-[#D0D5DD] border border-[#D0D5DD] rounded-[8px] pl-[14px] focus:outline-none font-[400] text-[16px] leading-[24px]"
+        className="mt-2 w-full h-[44px] bg-white text-black placeholder:text-[#D0D5DD] border border-[#D0D5DD] rounded-[8px] pl-[14px] focus:outline-none font-[400] text-[16px] leading-[24px]" 
+        value={selectedLanguages}
+        onChange={handleLanguageChange}
       >
         <option value="Moroco">Moroco</option>
         <option value="English">English</option>
         <option value="French">French</option>
         <option value="Algerian">Algerian</option>
       </select>
+      <div className="mt-2 text-[16px] text-green-700">
+         {selectedLanguages.join(", ")}
+      </div>
     </div>
 
     {/* Expiry Date */}
@@ -116,14 +150,12 @@ const EditPromoCode = () => {
       >
         Usage Limit<span className="text-red-500 ml-1">*</span>
       </label>
-      <select
+      <input
+        type='number'
+        placeholder='Enter User Limit'
         id="usageLimit"
         className="mt-2 w-full h-[44px] bg-white text-black placeholder:text-[#D0D5DD] border border-[#D0D5DD] rounded-[8px] pl-[14px] focus:outline-none font-[400] text-[16px] leading-[24px]"
-      >
-        <option value="03">03</option>
-        <option value="02">02</option>
-        <option value="01">01</option>
-      </select>
+      />
     </div>
   </div>
 </div>
@@ -138,7 +170,7 @@ const EditPromoCode = () => {
                     Cancel
                 </button>
                 <button
-                    className="w-[210px] h-[44px] rounded-[100px] bg-[#FFC600] mx-5 mr-5 py-2 px-4 font-inter font-[600] text-[16px] leading-6"
+                    className="w-[210px] h-[44px] rounded-[100px] bg-[#FFC600] mx-5 mr-5 py-2 px-4 font-inter font-[600] text-[16px] leading-6" onClick={()=> alert("Functionality will be added soon")}
                 >
                     Save Changes
                 </button>

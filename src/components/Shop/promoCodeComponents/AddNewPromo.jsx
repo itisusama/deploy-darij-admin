@@ -1,8 +1,30 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 
 const AddNewPromo = () => {
     const navigate = useNavigate();
+    const [selectedLanguages, setSelectedLanguages] = useState([]);
+        const [selectedPlan, setSelectedPlan] = useState([]);
+    
+        const handleLanguageChange = (event) => {
+          const selectedValue = event.target.value;
+      
+          setSelectedLanguages((prevLanguages) => {
+            return prevLanguages.includes(selectedValue)
+              ? prevLanguages.filter((lang) => lang !== selectedValue)
+              : [...prevLanguages, selectedValue];
+          });
+        };
+    
+        const handlePlanChange = (event) => {
+          const selectedValue = event.target.value;
+      
+          setSelectedPlan((prevPlan) => {
+            return prevPlan.includes(selectedValue)
+              ? prevPlan.filter((plan) => plan !== selectedValue)
+              : [...prevPlan, selectedValue];
+          });
+        };
     return (
         <section className='h-screen overflow-y-auto overflow-x-hidden custom-scrollbar'>
         <div className='w-full h-fit bg-white border border-[#E1E5E8] rounded-[30px] p-7'>
@@ -28,44 +50,52 @@ const AddNewPromo = () => {
             />
         </div>
 
-        <div>
-            <label
-                htmlFor="subscription"
-                className="ml-2 flex items-center font-inter text-[#000000] font-[500] text-[14px] leading-[20px]"
-            >
-                Subscription Plan<span className="text-red-500 ml-1">*</span>
-            </label>
-            <select
-                name="subscription"
-                id="subscription"
-                className="mt-2 w-full h-[44px] bg-white text-black placeholder:text-[#D0D5DD] shadow-[0px_1px_2px_0px_#1018280D] rounded-[8px] pl-[14px] focus:outline-[#ffc500] font-[400] text-[16px] leading-[24px]"
-            >
-                <option value="Lifetime">Lifetime</option>
-                <option value="Yearly">Yearly</option>
-                <option value="Monthly">Monthly</option>
-                <option value="Weekly">Weekly</option>
-            </select>
-        </div>
+        <div className="w-full">
+      <label
+        htmlFor="subscription"
+        className="ml-2 flex items-center font-inter text-[#000000] font-[500] text-[14px] leading-[20px]"
+      >
+        Subscription Plan<span className="text-red-500 ml-1">*</span>
+      </label>
+      <select
+        id="subscription"
+        className="mt-2 w-full h-[44px] bg-white text-black placeholder:text-[#D0D5DD] border border-[#D0D5DD] rounded-[8px] pl-[14px] focus:outline-none font-[400] text-[16px] leading-[24px]"
+        value={selectedPlan}
+        onChange={handlePlanChange}
+      >
+        <option value="Lifetime">Lifetime</option>
+        <option value="Yearly">Yearly</option>
+        <option value="Monthly">Monthly</option>
+        <option value="Weekly">Weekly</option>
+      </select>
+      <div className="mt-2 text-[16px] text-green-700">
+         {selectedPlan.join(", ")}
+      </div>
+    </div>
 
         {/* second */}
-        <div>
-            <label
-                htmlFor="language"
-                className="ml-2 flex items-center font-inter text-[#000000] font-[500] text-[14px] leading-[20px]"
-            >
-                Applicable Language<span className="text-red-500 ml-1">*</span>
-            </label>
-            <select
-                name="language"
-                id="language"
-                className="mt-2 w-full h-[44px] bg-white text-black placeholder:text-[#D0D5DD] shadow-[0px_1px_2px_0px_#1018280D] rounded-[8px] pl-[14px] focus:outline-[#ffc500] font-[400] text-[16px] leading-[24px]"
-            >
-                <option value="Moroco">Moroco</option>
-                <option value="English">English</option>
-                <option value="French">French</option>
-                <option value="Algerian">Algerian</option>
-            </select>
-        </div>
+        <div className="w-full">
+      <label
+        htmlFor="language"
+        className="ml-2 flex items-center font-inter text-[#000000] font-[500] text-[14px] leading-[20px]"
+      >
+        Applicable Language<span className="text-red-500 ml-1">*</span>
+      </label>
+      <select
+        id="language"
+        className="mt-2 w-full h-[44px] bg-white text-black placeholder:text-[#D0D5DD] border border-[#D0D5DD] rounded-[8px] pl-[14px] focus:outline-none font-[400] text-[16px] leading-[24px]" 
+        value={selectedLanguages}
+        onChange={handleLanguageChange}
+      >
+        <option value="Moroco">Moroco</option>
+        <option value="English">English</option>
+        <option value="French">French</option>
+        <option value="Algerian">Algerian</option>
+      </select>
+      <div className="mt-2 text-[16px] text-green-700">
+         {selectedLanguages.join(", ")}
+      </div>
+    </div>
 
         <div>
             <label
@@ -107,18 +137,12 @@ const AddNewPromo = () => {
             >
                 Usage Limit<span className="text-red-500 ml-1">*</span>
             </label>
-            <select
-                name="usageLimit"
-                id="usageLimit"
-                className="mt-2 w-full h-[44px] bg-white text-black placeholder:text-[#D0D5DD] shadow-[0px_1px_2px_0px_#1018280D] rounded-[8px] pl-[14px] focus:outline-[#ffc500] font-[400] text-[16px] leading-[24px]"
-            >
-                <option value="0" disabled>
-                    Please enter the limit of users
-                </option>
-                <option value="03">03</option>
-                <option value="02">02</option>
-                <option value="01">01</option>
-            </select>
+            <input
+        type='number'
+        placeholder='Enter User Limit'
+        id="usageLimit"
+        className="mt-2 w-full h-[44px] bg-white text-black placeholder:text-[#D0D5DD] border border-[#D0D5DD] rounded-[8px] pl-[14px] focus:outline-none font-[400] text-[16px] leading-[24px]"
+      />
         </div>
     </div>
 
@@ -131,7 +155,7 @@ const AddNewPromo = () => {
             Cancel
         </button>
         <button
-            className="w-full md:w-[210px] h-[44px] rounded-[100px] bg-[#FFC600] py-2 px-4 font-inter font-[600] text-[16px] leading-6"
+            className="w-full md:w-[210px] h-[44px] rounded-[100px] bg-[#FFC600] py-2 px-4 font-inter font-[600] text-[16px] leading-6" onClick={()=> alert("Functionality will be added soon")}
         >
             Add
         </button>
