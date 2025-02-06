@@ -39,6 +39,7 @@ const Words_learn = () => {
                   class="w-[100%] block p-2 py-3 ps-10 bg-[#F9F9F9] text-sm border border-[#E1E5E8] rounded-full"
                   placeholder="Search"
                   required
+                  maxlength="50"
                 />
               </form>
             </div>
