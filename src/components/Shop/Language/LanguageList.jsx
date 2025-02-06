@@ -12,7 +12,7 @@ const LanguageList = ({ language }) => {
 
     const handleDelete = (lang) => {
         setDropdownVisible(null);
-        alert("Delete clicked for:", lang);
+        alert("Functionality will be added soon");
     };
 
     return (
@@ -30,10 +30,10 @@ const LanguageList = ({ language }) => {
                             className="w-4 h-4 text-[#000000] cursor-pointer"
                         />
                         {dropdownVisible === index && (
-                            <div className="absolute top-[100%] right-0 w-32 bg-white border rounded-lg shadow-md z-10 mt-0 mr-2">
+                            <div className="absolute top-[75%] right-0 w-32 bg-white border rounded-lg shadow-md z-10 mt-0 mr-2">
                                 <button
                                     onClick={() => handleDelete(lang)}
-                                    className="w-full px-4 py-2 text-left hover:bg-gray-100"
+                                    className="w-full px-4 py-2 text-left hover:bg-gray-100 text-red-600"
                                 >
                                     Delete
                                 </button>
