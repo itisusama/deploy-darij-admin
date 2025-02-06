@@ -23,6 +23,7 @@ const Addword = () => {
             type="text"
             className="w-full px-3 py-2 border bg-[#F9F9F9] rounded-md focus:outline-none focus:ring-1 focus:[#D0D5DD]"
             placeholder="01"
+            maxlength="50"
           />
         </div>
         <div className=""> <Uploadwordimg/> </div>
