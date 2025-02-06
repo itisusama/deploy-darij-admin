@@ -90,6 +90,7 @@ const AddLanguage = ({ handleClose, handleAdd }) => {
         placeholder='English'
         onChange={(e) => setLanguageName(e.target.value)}
         className='w-[512px] h-[44px] font-inter font-[400] py-[10px] px-[14px] border rounded-lg border-[#E1E1E1] focus:outline-none'
+        maxlength="50"
       />
       {errors.languageName && (
         <span className="text-red-500 text-sm">{errors.languageName}</span>

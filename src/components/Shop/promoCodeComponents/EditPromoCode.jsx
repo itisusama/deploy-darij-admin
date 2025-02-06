@@ -50,6 +50,7 @@ const EditPromoCode = () => {
         className="mt-2 w-full h-[44px] bg-white text-black placeholder:text-[#D0D5DD] border border-[#D0D5DD] rounded-[8px] py-[12px] pl-[14px] focus:outline-none font-[400] text-[16px] leading-[24px]"
         required
         autoComplete="off"
+        maxlength="50"
       />
     </div>
 
@@ -119,6 +120,7 @@ const EditPromoCode = () => {
         className="date mt-2 w-full h-[44px] bg-white text-black placeholder:text-[#D0D5DD] border border-[#D0D5DD] rounded-[8px] py-[12px] pl-[14px] focus:outline-none font-[400] text-[16px] leading-[24px]"
         required
         autoComplete="off"
+        maxlength="50"
       />
     </div>
   </div>
@@ -139,6 +141,7 @@ const EditPromoCode = () => {
         className="mt-2 w-full h-[44px] bg-white text-black placeholder:text-[#D0D5DD] border border-[#D0D5DD] rounded-[8px] py-[12px] pl-[14px] focus:outline-none font-[400] text-[16px] leading-[24px]"
         required
         autoComplete="off"
+        maxlength="50"
       />
     </div>
 
@@ -155,6 +158,7 @@ const EditPromoCode = () => {
         placeholder='Enter User Limit'
         id="usageLimit"
         className="mt-2 w-full h-[44px] bg-white text-black placeholder:text-[#D0D5DD] border border-[#D0D5DD] rounded-[8px] pl-[14px] focus:outline-none font-[400] text-[16px] leading-[24px]"
+        maxlength="50"
       />
     </div>
   </div>
