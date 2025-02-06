@@ -42,42 +42,42 @@ const MiniGameThreeManagement = () => {
         img: Wordicon,
         menu: threedoticon,
       },
-      {
-        id: 7,
-        heading: "I went to",
-        img: Wordicon,
-        menu: threedoticon,
-      },
-      {
-        id: 8,
-        heading: "I went to",
-        img: Wordicon,
-        menu: threedoticon,
-      },
-      {
-        id: 9,
-        heading: "I went to",
-        img: Wordicon,
-        menu: threedoticon,
-      },
-      {
-        id: 10,
-        heading: "I went to",
-        img: Wordicon,
-        menu: threedoticon,
-      },
-      {
-        id: 11,
-        heading: "I went to",
-        img: Wordicon,
-        menu: threedoticon,
-      },
-      {
-        id: 12,
-        heading: "I went to",
-        img: Wordicon,
-        menu: threedoticon,
-      },
+      // {
+      //   id: 7,
+      //   heading: "I went to",
+      //   img: Wordicon,
+      //   menu: threedoticon,
+      // },
+      // {
+      //   id: 8,
+      //   heading: "I went to",
+      //   img: Wordicon,
+      //   menu: threedoticon,
+      // },
+      // {
+      //   id: 9,
+      //   heading: "I went to",
+      //   img: Wordicon,
+      //   menu: threedoticon,
+      // },
+      // {
+      //   id: 10,
+      //   heading: "I went to",
+      //   img: Wordicon,
+      //   menu: threedoticon,
+      // },
+      // {
+      //   id: 11,
+      //   heading: "I went to",
+      //   img: Wordicon,
+      //   menu: threedoticon,
+      // },
+      // {
+      //   id: 12,
+      //   heading: "I went to",
+      //   img: Wordicon,
+      //   menu: threedoticon,
+      // },
   ];
   return (
     <>
