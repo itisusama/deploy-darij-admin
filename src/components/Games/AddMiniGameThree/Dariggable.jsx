@@ -4,7 +4,7 @@ import { Iconword } from "../../../Data/Iconword";
 const Dariggable = () => {
   return (
     <div>
-      <div className="mt-4">
+      <div className="mt-4 mb-16">
         <div className=" mb-1">
           <label htmlFor="">
             Add Draggable Cards <span className="text-red-500">*</span>
@@ -22,7 +22,7 @@ const Dariggable = () => {
         </div>
 
         <div className="flex flex-row gap-3">
-          {Iconword.map((item, index) => (
+          {/* {Iconword.map((item, index) => (
             <div className="flex flex-row cursor-pointer mt-3" key={index}>
               <div className=" flex border rounded-lg bg-[#FFF1B2] w-[76px] h-[28px] justify-center items-center gap-2 ">
                 <div className="">
@@ -36,7 +36,7 @@ const Dariggable = () => {
                 </div>
               </div>
             </div>
-          ))}
+          ))} */}
         </div>
       </div>
     </div>
