@@ -44,7 +44,7 @@ const GamesHeader = ({ title, path, onBack, onClick }) => {
                     <AiOutlineSearch className="absolute left-4 top-1/2 transform -translate-y-1/2 text-[#626262] w-[18px] h-[18px]" />
                     <input
                         type="text"
-                        placeholder="Search"
+                        placeholder="Search (coming soon)"
                         className="w-[323px] h-[40px] pl-10 pr-4 py-2 font-inter font-[400] text-[12px] leading-5 placeholder:text-[#626262] border border-[#E1E5E8] rounded-[30px] focus:outline-none focus:ring-2 focus:ring-yellow-500"
                     />
                 </div>
