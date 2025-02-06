@@ -191,24 +191,30 @@ const AddProfessionalVersionManagement = () => {
                   <p className="mt-2 font-inter text-[#000000]">Upload Video</p>
                 </div>
                 {/* Preview Section */}
-            {selectedFile && (
+                {selectedFile && (
               <div className="ml-4">
                 {selectedFile.type.startsWith("image/") ? (
-                  <img
+                  <div className='relative'>
+                    <span className='absolute right-0 text-white cursor-pointer' onClick={()=>setSelectedFile(null)}>X</span>
+                    <img
                     src={previewUrl}
                     alt="Preview"
                     className="mt-2 w-[80px] h-[80px] object-cover rounded-md"
                   />
+                  </div>
                 ) : selectedFile.type.startsWith("video/") ? (
-                  <video
+                  <div className='relative'>
+                    <span className='absolute right-0 text-white cursor-pointer' onClick={()=>setSelectedFile(null)}>X</span>
+                    <video
                     controls
-                    className="mt-2 w-[250px] h-[150px] rounded-md"
+                    className="mt-2 w-[80px] h-[80px] rounded-md"
                   >
                     <source src={previewUrl} type={selectedFile.type} />
                     Your browser does not support the video tag.
                   </video>
+                  </div>
                 ) : (
-                  <p className="text-red-500">File type not supported for preview</p>
+                  <div></div>
                 )}
               </div>
             )}
