@@ -7,7 +7,7 @@ import Arabic from '../../../assets/saudi-arabia.svg';
 import Tunisian from '../../../assets/tunisia.svg';
 
 const LanguageCards = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(null);
   const navigate = useNavigate();
 
   const languages = [
@@ -20,13 +20,18 @@ const LanguageCards = () => {
 
   const handleCardClick = (index) => {
     setActiveIndex(index);
+
+    // Check if local storage title is "Games"
+    if (localStorage.getItem("title") === "Games") {
+      localStorage.setItem("languageIndex", index);
+    }
   };
 
   const handleNextClick = () => {
     if (activeIndex !== null) {
-      navigate('/mini-games');
+      navigate("/mini-games");
     } else {
-      alert('Please select a language before proceeding.');
+      alert("Please select a language before proceeding.");
     }
   };
 
