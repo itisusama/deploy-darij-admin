@@ -28,7 +28,7 @@ const EditWordManagement = () => {
           Chancel
           </button>
           </Link>
-          <button className="border bg-yellow-400 text-black font-bold py-2 px-4 rounded-full hover:bg-yellow-500 w-[210px] ">
+          <button className="border bg-yellow-400 text-black font-bold py-2 px-4 rounded-full hover:bg-yellow-500 w-[210px]" onClick={()=> alert("Functionality will be added soon")}>
             Save Change 
           </button>
         </div>

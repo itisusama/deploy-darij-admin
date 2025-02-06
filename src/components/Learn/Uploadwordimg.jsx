@@ -1,15 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
 import Cemra from "../../assets/Cemra.svg";
 import Pen from "../../assets/pen.svg";
 import Audio from "../../assets/audio.svg";
 import Plusicon from "../../assets/plusicon.svg";
 
 const Uploadwordimg = () => {
+  const [selectedFile, setSelectedFile] = useState(null);
+  const [selectedAudioFile, setSelectedAudioFile] = useState(null);
+      
+          const handleFileChange = (event) => {
+              if (event.target.files && event.target.files[0]) {
+                setSelectedFile(event.target.files[0].name);
+              }
+            };
+          
+            const openFileSelector = () => {
+              document.getElementById("fileInput").click();
+            };
+
+          const handleAudioFileChange = (event) => {
+              if (event.target.files && event.target.files[0]) {
+                setSelectedAudioFile(event.target.files[0].name);
+              }
+            };
+          
+            const openAudioFileSelector = () => {
+              document.getElementById("fileInput2").click();
+            };
   return (
     <div>
       <div className="border rounded-3xl bg-[#FFFFFF] text-[#D0D5DD]">
         <div className=" flex ">
-          <div className="ml-9 mt-9 mr-9 ">
+          {/* Image */}
+          <div className="ml-9 mt-9 mr-9 cursor-pointer" onClick={openFileSelector}>
             <div className="h-[125px] w-[125px] bg-[#F9F9F9] flex justify-center  items-center rounded-lg">
               <img src={Cemra} alt="" className=" items-center" />
             </div>
@@ -21,8 +44,16 @@ const Uploadwordimg = () => {
                 Upload Image{" "}
               </div>
             </div>
+            <input
+                      type="file"
+                      id="fileInput"
+                      style={{ display: "none" }}
+                      onChange={handleFileChange}
+                      accept="image/*"
+                    />
           </div>
-          <div className="mt-9 flex items-center flex-col gap-3">
+          {/* Audio */}
+          <div className="mt-9 flex items-center flex-col gap-3 cursor-pointer" onClick={openAudioFileSelector}>
             <div className=" bg-[#E2E2E2] h-[120px] w-[120px] rounded-full flex justify-center items-center">
               {" "}
               <img src={Audio} alt="" className="" />
@@ -35,9 +66,27 @@ const Uploadwordimg = () => {
               </div>
               <div className=" underline text-[#000000] pl-2"> Add Audio</div>
             </div>
+            <input
+                      type="file"
+                      id="fileInput2"
+                      style={{ display: "none" }}
+                      onChange={handleAudioFileChange}
+                      accept="audio/*"
+                    />
           </div>
         </div>
 
+        {selectedFile && (
+                      <p className="text-green-600 mt-2 ml-4">
+                        {selectedFile} <span className="text-black cursor-pointer" onClick={()=> setSelectedFile(null)}>x</span>
+                      </p>
+                    )}
+
+        {selectedAudioFile && (
+                      <p className="text-green-600 mt-2 ml-4">
+                        {selectedAudioFile} <span className="text-black cursor-pointer" onClick={()=> setSelectedAudioFile(null)}>x</span>
+                      </p>
+                    )}
         <div className="ml-9 mt-2">
           <label htmlFor="text" className="text-[#000000]">
             French Word<span className="text-red-500">*</span>

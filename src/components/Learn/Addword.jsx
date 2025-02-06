@@ -1,8 +1,16 @@
 import React from "react";
 import Uploadwordimg from "../Learn/Uploadwordimg"
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Addword = () => {
+  const navigate = useNavigate();
+
+  const handleCancelClick = () => {
+    navigate("/learn");
+    setTimeout(() => {
+      navigate("/word-learn");
+    }, 100);
+  };
   return (
     <div className="overflow-y-auto h-screen custom-scrollbar">
       <div className=" border rounded-3xl m-2 p-4 h-[560px]">
@@ -20,12 +28,12 @@ const Addword = () => {
         <div className=""> <Uploadwordimg/> </div>
 
         <div className="relative space-x-2 float-right mt-6">
-          <Link to="/learn">
-          <button className="border  text-black font-bold py-2 px-4 rounded-full w-[210px] ">
+          
+          <button className="border  text-black font-bold py-2 px-4 rounded-full w-[210px] " onClick={handleCancelClick}>
           Cancel
           </button>
-          </Link>
-          <button className="border bg-yellow-400 text-black font-bold py-2 px-4 rounded-full hover:bg-yellow-500 w-[210px] ">
+          
+          <button className="border bg-yellow-400 text-black font-bold py-2 px-4 rounded-full hover:bg-yellow-500 w-[210px]" onClick={()=> alert("Functionalitly will be added soon")}>
             Add 
           </button>
         </div>
