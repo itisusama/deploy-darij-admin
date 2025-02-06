@@ -164,7 +164,8 @@ const AddLanguage = ({ handleClose, handleAdd }) => {
 
       <div className="flex justify-end mt-32">
         <button
-          onClick={handleAddLanguage}
+          // onClick={handleAddLanguage}
+          onClick={()=> alert("Functionality will be added soon")}
           className="w-[179px] h-[44px] py-[10px] px-5 rounded-[100px] bg-[#FFC600] text-black font-inter font-[600] text-[14px] leading-6"
         >
           Add
