@@ -88,7 +88,7 @@ const AddNewMiniGameOneManagement = () => {
                         Select from below words
                     </p>
                     <button
-                        className="w-[151px] h-[42px] border border-[#FFC600] rounded-full bg-[#FFF1B2] py-3 ml-5 font-inter font-[600] text-[12px] leading-6"
+                        className="w-[151px] h-[42px] border border-[#FFC600] rounded-full bg-[#FFF1B2] py-3 ml-5 font-inter font-[600] text-[12px] leading-6" onClick={()=> alert("Functionality will be added soon")}
                     >
                         Select All
                     </button>
@@ -127,7 +127,7 @@ const AddNewMiniGameOneManagement = () => {
                     Cancel
                 </button>
                 <button
-                    onClick={() => navigate('/mini-game-one')}
+                    onClick={() => alert('Functionality will be added soon')}
                     className="w-52 h-11 rounded-full bg-[#FFC600] ml-5 font-inter font-semibold text-base leading-6"
                 >
                     Add
