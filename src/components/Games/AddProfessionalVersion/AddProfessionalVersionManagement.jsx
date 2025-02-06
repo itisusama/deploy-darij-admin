@@ -16,9 +16,12 @@ const AddProfessionalVersionManagement = () => {
   const { pv } = location.state || {};
   const [activeIndex, setActiveIndex] = useState(0);
   const icons = [{ name: Text }, { name: Microphone }, { name: Image }];
+  
   const handleCardClick = (index) => {
     setActiveIndex(index);
-    alert("Functionality will be added soon");
+    if (index !== 0) {
+      alert("Functionality will be added soon");
+    }
   };
   const [editorContent, setEditorContent] = useState("");
 
@@ -105,7 +108,7 @@ const AddProfessionalVersionManagement = () => {
               className="h-[203px] bg-[#FCFCFD]  rounded-md"
               placeholder="Add Details Here ....."
             />
-            <section className="absolute top-14 lg:left-3">
+            {/* <section className="absolute top-14 lg:left-3">
               <section className="flex items-center gap-2">
                 <div className="bg-white p-4 rounded-[24px] border w-[100%] lg:w-[80%]">
                   <p className="text-[16px] font-inter font-[400]">
@@ -138,7 +141,7 @@ const AddProfessionalVersionManagement = () => {
                   </div>
                 </div>
               </div>
-            </section>
+            </section> */}
           </div>
         </div>
         {/* Text Editor */}
