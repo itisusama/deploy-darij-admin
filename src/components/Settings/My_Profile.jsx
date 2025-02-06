@@ -1,19 +1,42 @@
-import React from "react";
+import React, {useState, useRef} from "react";
 import Profile from "../../assets/Profile.png";
 import profileCamera from "../../assets/profilecamra.svg";
 
 const My_Profile = () => {
+  const fileInputRef = useRef(null);
+  const [profileImage, setProfileImage] = useState(Profile);
+
+  const handleFileSelect = async (event) => {
+    const file = event.target.files[0];
+    if (!file) {
+      setProfileImage(file);
+    }
+  };
   return (
     <section className="overflow-y-auto h-screen custom-scrollbar">
     <div className="p-4 border border-gray-300 h-[500px] rounded-3xl relative">
-      <div className="flex">
-        <div>
-          <img src={Profile} alt="" className="h-[160px] w-[160px]" />
-        </div>
-        <div className=" bg-black h-10 w-10 border rounded-full border-white flex justify-center items-center absolute ml-[110px] mt-[100px]">
-          <img src={profileCamera} alt="" className="" />
-        </div>
-      </div>
+    <div className="flex">
+            <div>
+              <img
+                src={Profile}
+                alt=""
+                className="h-[160px] w-[160px] cursor-pointer rounded-full"
+              />
+            </div>
+            <div
+              className=" bg-black h-10 w-10 border rounded-full border-white flex justify-center items-center absolute ml-[110px] mt-[100px] cursor-pointer"
+              onClick={() => fileInputRef.current.click()}
+            >
+              <img src={profileCamera} alt="" className="" />
+            </div>
+            <input
+              type="file"
+              ref={fileInputRef}
+              className="hidden"
+              accept="image/*"
+              onChange={handleFileSelect}
+            />
+          </div>
 
       <div className="mt-5 flex justify-between">
         <div className=" w-[50%]">
@@ -57,7 +80,7 @@ const My_Profile = () => {
         </div>
       </div>
       <div className="absolute bottom-8 right-4">
-          <button className="bg-yellow-400 text-black font-bold py-2 px-4 rounded-full hover:bg-yellow-500 w-[210px] ">
+          <button className="bg-yellow-400 text-black font-bold py-2 px-4 rounded-full hover:bg-yellow-500 w-[210px]" onClick={()=> alert("Functionality will be added soon")}>
             Update
           </button>
         </div>

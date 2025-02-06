@@ -40,7 +40,7 @@ const Add_banner = () => {
 
   const handleDelete = (banItem) => {
     console.log(`Delete banner: ${banItem}`);
-    alert("Do you want to delete?")
+    alert("Functionality will be added soon");
   };
   return (
     <div className="">
