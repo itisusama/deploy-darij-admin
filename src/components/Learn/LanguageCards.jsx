@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import English from '../../assets/UK.svg';
+import English from '../../assets/English.svg';
 import Algerian from '../../assets/Algeria.svg';
 import Moroccan from '../../assets/morocco.svg';
 import Arabic from '../../assets/saudi-arabia.svg';
 import Tunisian from '../../assets/tunisia.svg';
 
 const LanguageCards = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(null);
   const navigate = useNavigate();
 
   const languages = [
@@ -20,19 +20,24 @@ const LanguageCards = () => {
 
   const handleCardClick = (index) => {
     setActiveIndex(index);
+
+    // Check if local storage title is "Games"
+    if (localStorage.getItem("title") === "Games") {
+      localStorage.setItem("languageIndex", index);
+    }
   };
 
   const handleNextClick = () => {
     if (activeIndex !== null) {
-      navigate('/word-learn');
+      navigate("/word-learn");
     } else {
-      alert('Please select a language before proceeding.');
+      alert("Please select a language before proceeding.");
     }
   };
 
   return (
     <>
-      <section className="flex gap-3 justify-center items-center">
+      <section className="w-full flex gap-3 justify-center items-center">
         {languages.map((language, index) => (
           <div
             key={index}
