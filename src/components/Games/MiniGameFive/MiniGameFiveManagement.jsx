@@ -43,42 +43,42 @@ const MiniGameFiveManagement = () => {
           img: Wordicon,
           menu: threedoticon,
         },
-        {
-          id: 7,
-          heading: "Peux-tu me faire?",
-          img: Wordicon,
-          menu: threedoticon,
-        },
-        {
-          id: 8,
-          heading: "Où est ton frère?",
-          img: Wordicon,
-          menu: threedoticon,
-        },
-        {
-          id: 9,
-          heading: "Je suis un garçon.",
-          img: Wordicon,
-          menu: threedoticon,
-        },
-        {
-          id: 10,
-          heading: "Peux-tu me faire?",
-          img: Wordicon,
-          menu: threedoticon,
-        },
-        {
-          id: 11,
-          heading: "Où est ton frère?",
-          img: Wordicon,
-          menu: threedoticon,
-        },
-        {
-          id: 12,
-          heading: "Je suis un garçon.",
-          img: Wordicon,
-          menu: threedoticon,
-        },
+        // {
+        //   id: 7,
+        //   heading: "Peux-tu me faire?",
+        //   img: Wordicon,
+        //   menu: threedoticon,
+        // },
+        // {
+        //   id: 8,
+        //   heading: "Où est ton frère?",
+        //   img: Wordicon,
+        //   menu: threedoticon,
+        // },
+        // {
+        //   id: 9,
+        //   heading: "Je suis un garçon.",
+        //   img: Wordicon,
+        //   menu: threedoticon,
+        // },
+        // {
+        //   id: 10,
+        //   heading: "Peux-tu me faire?",
+        //   img: Wordicon,
+        //   menu: threedoticon,
+        // },
+        // {
+        //   id: 11,
+        //   heading: "Où est ton frère?",
+        //   img: Wordicon,
+        //   menu: threedoticon,
+        // },
+        // {
+        //   id: 12,
+        //   heading: "Je suis un garçon.",
+        //   img: Wordicon,
+        //   menu: threedoticon,
+        // },
     ];
   return (
     <>
