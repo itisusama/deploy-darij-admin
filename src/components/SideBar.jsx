@@ -50,20 +50,46 @@ const SideBar = ({ activeSection, setActiveSection }) => {
   };
 
   const handleTabClick = (title, id, route) => {
-    console.log(title, "title here");
-    localStorage.setItem("title", title);
-  
-    if (id === 3) { // For Games
-      if (isGamesOpen) {
-        setIsGamesOpen(false); // Close the dropdown
-      } else {
-        navigate(route); // Navigate to Games
-        setIsGamesOpen(true); // Open the dropdown
+    const currentTitle = localStorage.getItem("title"); // Get the current title
+    if (currentTitle) {
+        localStorage.setItem("previous-title", currentTitle); // Save current title as previous
+    }
+    
+    localStorage.setItem("title", title); // Save the new title
+    navigate(route);
+};
+
+useEffect(() => {
+  const savedTitle = localStorage.getItem("title");
+  const matchedItem = sidebarData.find((item) => item.route === location.pathname);
+
+  if (matchedItem) {
+    localStorage.getItem("title"); // Save current title as previous
+    setActiveSection(matchedItem.title);
+    localStorage.setItem("title", matchedItem.title);
+  } else if (savedTitle) {
+    setActiveSection(savedTitle);
+  }
+
+  // Listen to browser back/forward actions
+  const handleBackButton = () => {
+    const previousTitle = localStorage.getItem("previous-title");
+
+    if (previousTitle) {
+      const previousItem = sidebarData.find((item) => item.title === previousTitle);
+      if (previousItem) {
+        navigate(previousItem.route, { replace: true });
+        localStorage.setItem("title", previousTitle); // Set title back
       }
-    } else {
-      navigate(route); // For other tabs
     }
   };
+
+  window.addEventListener("popstate", handleBackButton);
+
+  return () => {
+    window.removeEventListener("popstate", handleBackButton);
+  };
+}, [location, navigate, setActiveSection]);
 
   return (
     <>
@@ -113,26 +139,7 @@ const SideBar = ({ activeSection, setActiveSection }) => {
                         {!isCollapsed && (
                           <div className="ml-5 flex-1 font-inter font-[400] text-[16px]">{e.title}</div>
                         )}
-                        {/* {e.id === 3 && !isCollapsed && (
-                          <FaChevronDown
-                            className={`text-white text-lg transform ${
-                              isGamesOpen ? "rotate-180" : "rotate-0"
-                            } transition-transform`}
-                          />
-                        )} */}
                       </div>
-                      {/* {e.id === 3 && isGamesOpen && (
-                        <ul  className={`${isCollapsed ? "absolute left-16 bg-[#1a1a1a] text-white text-sm rounded-lg" : "ml-8 mt-2 bg-[#1a1a1a] text-white text-sm rounded-lg relative z-[100]"}`}>
-                          {["Mini Game 1", "Mini Game 2", "Mini Game 3", "Mini Game 4", "Mini Game 5"].map((game, index) => {
-                          const gamePaths = ["mini-game-one", "mini-game-two", "mini-game-three", "mini-game-four", "mini-game-five"];
-                          return (
-                            <li key={index} className="cursor-pointer hover:bg-gray-700 p-2">
-                              <div onClick={() => navigate(`/${gamePaths[index]}`)}>{game}</div>
-                            </li>
-                          );
-                        })}
-                        </ul>
-                      )} */}
                     </li>
                   ))}
                   <li
