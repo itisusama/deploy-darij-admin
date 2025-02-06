@@ -37,40 +37,41 @@ export const Wordlist = [
     heading: "Eleven",
     img: Wordicon ,
     menu: threedoticon,
-  }, {
-    id: 7,
-    heading: "Twelve",
-    img: Wordicon ,
-    menu: threedoticon,
-  }, {
-    id: 8,
-    heading: "Thirteen",
-    img: Wordicon ,
-    menu: threedoticon,
-  },
-  , {
-    id: 9,
-    heading: "Fourteen",
-    img: Wordicon ,
-    menu: threedoticon,
-  },
-  , {
-    id: 10,
-    heading: "Fifteen",
-    img: Wordicon ,
-    menu: threedoticon,
-  },
-  , {
-    id: 11,
-    heading: "Sixteen",
-    img: Wordicon ,
-    menu: threedoticon,
-  },
-  , {
-    id: 12,
-    heading: "Seventeen",
-    img: Wordicon ,
-    menu: threedoticon,
-  },
+  }, 
+  // {
+  //   id: 7,
+  //   heading: "Twelve",
+  //   img: Wordicon ,
+  //   menu: threedoticon,
+  // }, {
+  //   id: 8,
+  //   heading: "Thirteen",
+  //   img: Wordicon ,
+  //   menu: threedoticon,
+  // },
+  // , {
+  //   id: 9,
+  //   heading: "Fourteen",
+  //   img: Wordicon ,
+  //   menu: threedoticon,
+  // },
+  // , {
+  //   id: 10,
+  //   heading: "Fifteen",
+  //   img: Wordicon ,
+  //   menu: threedoticon,
+  // },
+  // , {
+  //   id: 11,
+  //   heading: "Sixteen",
+  //   img: Wordicon ,
+  //   menu: threedoticon,
+  // },
+  // , {
+  //   id: 12,
+  //   heading: "Seventeen",
+  //   img: Wordicon ,
+  //   menu: threedoticon,
+  // },
   
 ];

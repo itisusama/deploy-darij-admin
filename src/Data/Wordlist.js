@@ -43,25 +43,26 @@ export const Wordlist = [
     time: "ID:02",
     img: Wordicon ,
     menu: threedoticon,
-  }, {
-    id: 7,
-    heading: "good night",
-    time: "ID:02",
-    img: Wordicon ,
-    menu: threedoticon,
-  }, {
-    id: 8,
-    heading: "Car",
-    time: "ID:05",
-    img: Wordicon ,
-    menu: threedoticon,
-  },
-  , {
-    id: 9,
-    heading: "Good Morning",
-    time: "ID:06",
-    img: Wordicon ,
-    menu: threedoticon,
-  },
+  }, 
+  // {
+  //   id: 7,
+  //   heading: "good night",
+  //   time: "ID:02",
+  //   img: Wordicon ,
+  //   menu: threedoticon,
+  // }, {
+  //   id: 8,
+  //   heading: "Car",
+  //   time: "ID:05",
+  //   img: Wordicon ,
+  //   menu: threedoticon,
+  // },
+  // , {
+  //   id: 9,
+  //   heading: "Good Morning",
+  //   time: "ID:06",
+  //   img: Wordicon ,
+  //   menu: threedoticon,
+  // },
   
 ];
