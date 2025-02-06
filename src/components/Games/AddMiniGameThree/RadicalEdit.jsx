@@ -53,7 +53,7 @@ const RadicalEdit = () => {
 
       <div className="flex flex-row gap-3">
         
-        {Iconword.map((item, index) => (
+        {/* {Iconword.map((item, index) => (
           <div className="flex flex-row cursor-pointer mt-7" key={index} onClick={()=> alert("Functionality will be added soon")}>
             <div className=" flex border rounded-lg w-[57px] h-[28px] justify-center items-center gap-2 ">
               <div className="">
@@ -63,7 +63,7 @@ const RadicalEdit = () => {
               <div className=" text-black font-inter ">{item.text}</div>
             </div>
           </div>
-        ))}
+        ))} */}
       </div>
       
     </div>
