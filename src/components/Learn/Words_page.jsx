@@ -43,7 +43,7 @@ const Words_page = () => {
       {currentItems.map((word, index) => {
         return (
           <div
-            className="  relative flex justify-between items-center border rounded-3xl  py-6 w-[32%] hover:border-[#FFC600]"
+            className="relative flex justify-between items-center border rounded-3xl  py-6 w-[32%] hover:border-[#FFC600]"
             key={index}
           >
             <div className="flex gap-3">
@@ -100,7 +100,7 @@ const Words_page = () => {
                            >
                              <img src={Left} alt="left-icon" className="w-6 h-6" />
                            </button>
-                           {[...Array(totalPages).keys()].map((page) => (
+                           {/* {[...Array(totalPages).keys()].map((page) => (
                              <button
                                key={page}
                                className={`px-3 py-1 border rounded-md ${
@@ -112,7 +112,15 @@ const Words_page = () => {
                              >
                                {page + 1}
                              </button>
-                           ))}
+                           ))} */}
+                           <button
+                              className={`px-3 py-1 border rounded-md ${
+                                currentPage === 1 ? "bg-black text-white" : "bg-gray-200 hover:bg-gray-300"
+                              }`}
+                              onClick={() => handlePageChange(1)}
+                            >
+                              1
+                            </button>
                            <button
                              className="px-3 py-1 border rounded-md bg-gray-200 hover:bg-gray-300 disabled:bg-gray-100 disabled:cursor-not-allowed"
                              onClick={() => handlePageChange(currentPage + 1)}
