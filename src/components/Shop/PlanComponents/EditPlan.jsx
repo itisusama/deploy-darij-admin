@@ -80,9 +80,10 @@ const EditPlan = () => {
               }
               className="mt-2 w-full sm:h-[44px] sm:w-[300px] md:w-[540px] bg-white text-black placeholder:text-[#D0D5DD] border border-[#D0D5DD] shadow-[0px_1px_2px_0px_#1018280D] rounded-[8px] pl-[14px] focus:outline-none font-[400] text-[16px] leading-[24px]"
             >
-              <option value="Monthly">Monthly</option>
-              <option value="Yearly">Yearly</option>
               <option value="Lifetime">Lifetime</option>
+              <option value="Yearly">Yearly</option>
+              <option value="Monthly">Monthly</option>
+              <option value="Weekly">Weekly</option>
             </select>
           </div>
         </div>
@@ -96,7 +97,7 @@ const EditPlan = () => {
             Back
           </button>
           <button
-            className="w-[210px] h-[44px] rounded-[100px] bg-[#FFC600] mx-5 mr-5 py-2 px-4 font-inter font-[600] text-[16px] leading-6"
+            className="w-[210px] h-[44px] rounded-[100px] bg-[#FFC600] mx-5 mr-5 py-2 px-4 font-inter font-[600] text-[16px] leading-6" onClick={()=> alert("Functionality will be added soon")}
           >
             Save
           </button>
