@@ -25,6 +25,7 @@ const LoginForm = () => {
     const navigate = useNavigate();
     const [isFocused, setIsFocused] = useState(false);
     const [isButtonDisabled, setIsButtonDisabled] = useState(true);
+    const [isLoading, setIsLoading] = useState(false);
     
     const email = watch("email", "");
     const password = watch("password", "");
@@ -44,6 +45,7 @@ const LoginForm = () => {
         //     setIsLoginError(false); 
         // }
         try {
+            setIsLoading(true);
             const { email, password } = data;
             // console.log("Attempting to sign in with:", email, password);
     
@@ -71,6 +73,8 @@ const LoginForm = () => {
             } else if (error.code === "auth/too-many-requests") {
                 console.error("Too many attempts. Please try again later.");
             }
+        } finally {
+            setIsLoading(false);
         }
     };
 
@@ -147,9 +151,9 @@ const LoginForm = () => {
                     className={`w-full sm:w-[370px] py-[13px] px-[14px] rounded-[100px] font-inter 
                         ${isButtonDisabled ? 'bg-[#FFF1B2] text-[#B4B4B4] cursor-not-allowed' : 'bg-[#FFC600] text-[#000000]'} 
                         font-bold`}
-                    disabled={isButtonDisabled}
+                        disabled={isButtonDisabled || isLoading}
                 >
-                    Log In
+                    {isLoading ? "Logging in..." : "Log In"}
                 </button>
             </form>
         </div>
