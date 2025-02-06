@@ -56,8 +56,8 @@ const EditNewMiniGameFiveManagement = () => {
                   className="w-[28%] h-[44px] font-inter mx-8 px-3 border border-[#D0D5DD] rounded-lg pr-4"
                 >
                   <option value="Narrator">Narrator</option>
-                  <option value="Advance">Advance</option>
-                  <option value="Basic">Basic</option>
+                  <option value="Man">Man</option>
+                  <option value="Woman">Woman</option>
                 </select>
 
                 <div
