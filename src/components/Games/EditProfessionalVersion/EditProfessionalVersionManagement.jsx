@@ -16,7 +16,9 @@ const EditProfessionalVersionManagement = () => {
   const icons = [{ name: Text }, { name: Microphone }, { name: Image }];
   const handleCardClick = (index) => {
     setActiveIndex(index);
-    alert("Functionality will be added soon");
+    if (index !== 0) {
+      alert("Functionality will be added soon");
+    }
   };
 
   const [editorContent, setEditorContent] = useState("");
