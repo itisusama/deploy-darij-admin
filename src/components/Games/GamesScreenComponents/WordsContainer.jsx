@@ -16,7 +16,7 @@ const WordsContainer = ({path, customWordlist}) => {
       const toggleMenu = (index) => {
         setMenuIndex(menuIndex === index ? null : index);
       };
-       const [recordsPerPage, setRecordsPerPage] = useState(100); // Dynamic items per page
+       const [recordsPerPage, setRecordsPerPage] = useState(6); // Dynamic items per page
           const [currentPage, setCurrentPage] = useState(1);
 
           const wordlist = customWordlist || DefaultWordlist;
