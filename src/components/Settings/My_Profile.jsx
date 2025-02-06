@@ -48,6 +48,7 @@ const My_Profile = () => {
             id="firstName"
             className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-yellow-500"
             placeholder="Enter your first name"
+            maxlength="50"
           />
         </div>
         <div className="w-[49%]">
@@ -59,6 +60,7 @@ const My_Profile = () => {
             id="LastName"
             className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-yellow-500"
             placeholder="Enter your Last name"
+            maxlength="50"
           />
         </div>
       </div>
@@ -76,6 +78,7 @@ const My_Profile = () => {
             name="email"
             placeholder="Enter your Email"
             className="mt-1 p-2 w-full border border-gray-300 rounded-md focus:ring-yellow-500 focus:ring-1"
+            maxlength="50"
           />
         </div>
       </div>

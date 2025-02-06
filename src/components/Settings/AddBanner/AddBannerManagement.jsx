@@ -51,7 +51,7 @@ const AddBannerManagement = () => {
               <div className="ml-4">
                 {selectedFile.type.startsWith("image/") ? (
                   <div className='relative'>
-                    <span className='absolute right-0 text-white cursor-pointer' onClick={()=>setSelectedFile(null)}>X</span>
+                    <span className='absolute right-2 top-1 text-white cursor-pointer' onClick={()=>setSelectedFile(null)}>X</span>
                     <img
                     src={previewUrl}
                     alt="Preview"
@@ -60,7 +60,7 @@ const AddBannerManagement = () => {
                   </div>
                 ) : selectedFile.type.startsWith("video/") ? (
                   <div className='relative'>
-                    <span className='absolute right-0 text-white cursor-pointer' onClick={()=>setSelectedFile(null)}>X</span>
+                    <span className='absolute right-3 top-1 text-white cursor-pointer' onClick={()=>setSelectedFile(null)}>X</span>
                     <video
                     controls
                     className="mt-2 w-[80px] h-[80px] rounded-md"

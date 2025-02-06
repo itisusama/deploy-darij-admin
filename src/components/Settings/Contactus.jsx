@@ -13,7 +13,8 @@ const Contactus = () => {
           id="email"
           name="email"
           placeholder="Enter your Email"
-          className="mt-1 p-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-yellow-500"
+          className="mt-1 p-2 w-[50%] border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-yellow-500"
+          maxlength="50"
         />
         <div className="absolute bottom-8 right-4">
           <button className="bg-yellow-400 text-black font-bold py-2 px-4 rounded-full hover:bg-yellow-500 w-[210px] " onClick={()=>alert("Functionality will be added soon")}>
