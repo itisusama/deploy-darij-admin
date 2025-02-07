@@ -62,24 +62,24 @@ const SideBar = ({ activeSection, setActiveSection }) => {
 };
 console.log("Location:", location.pathname)
 
-useEffect(() => {
-  const handleBackButton = (event) => {
-    if (location.pathname === "/dashboard") {
-      event.preventDefault();
-      localStorage.clear();
-      window.history.pushState(null, "", location.pathname);
-    } else if (["/users", "/games", "/shop", "/learn", "/settings"].includes(location.pathname)) {
-      event.preventDefault();
-      navigate("/dashboard");
-    }
-  };
+// useEffect(() => {
+//   const handleBackButton = (event) => {
+//     if (location.pathname === "/dashboard") {
+//       event.preventDefault();
+//       localStorage.clear();
+//       window.history.pushState(null, "", location.pathname);
+//     } else if (["/users", "/games", "/shop", "/learn", "/settings"].includes(location.pathname)) {
+//       event.preventDefault();
+//       navigate("/dashboard");
+//     }
+//   };
 
-  window.addEventListener("popstate", handleBackButton);
+//   window.addEventListener("popstate", handleBackButton);
 
-  return () => {
-    window.removeEventListener("popstate", handleBackButton);
-  };
-}, [location.pathname, navigate]);
+//   return () => {
+//     window.removeEventListener("popstate", handleBackButton);
+//   };
+// }, [location.pathname, navigate]);
 
   return (
     <>
