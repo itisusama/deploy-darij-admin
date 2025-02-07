@@ -68,7 +68,13 @@ const UsersProfileManagement = () => {
                         alt={`language-${index}`}
                         className="rounded-full w-[24px] h-[24px]"
                       />
-                      <p className="text-black text-[14px]">English</p>
+                      <p className="text-black text-[14px]">
+                        {index === 0
+                          ? "English"
+                          : index === 1
+                          ? "Arabic"
+                          : "Other"}
+                      </p>{" "}
                     </div>
                   ))}
                 </td>
