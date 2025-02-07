@@ -7,9 +7,9 @@ const RecentSalesManagement = () => {
   return (
     <div className='h-screen overflow-y-auto custom-scrollbar'>
       <ShopHeader />
-      <h2 className=' font-inter font-[600] text-[24px] leading-9 mb-2'>With Promo Code</h2>
+      <h2 className=' font-inter font-[600] text-[24px] leading-9 mb-6'>With Promo Code</h2>
       <WithPromoSales/>
-      <h2 className=' font-inter font-[600] text-[24px] leading-9'>Without Promo Code</h2>
+      <h2 className=' font-inter font-[600] text-[24px] leading-9 mb-6'>Without Promo Code</h2>
       <WithoutPromoSales/>
     </div>
   )

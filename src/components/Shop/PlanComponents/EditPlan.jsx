@@ -91,7 +91,7 @@ const EditPlan = () => {
         {/* Buttons */}
         <div className="flex justify-end mt-44 mb-12">
           <button
-            onClick={() => navigate("/plan")}
+            onClick={() => navigate("/plan", {replace: true})}
             className="w-[210px] h-[44px] rounded-[100px] border border-[#000000] py-2 px-4 font-inter font-[600] text-[16px] leading-6"
           >
             Back

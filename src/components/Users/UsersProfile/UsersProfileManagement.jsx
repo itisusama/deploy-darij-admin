@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import userImage from "../../../assets/Group.svg";
 import StatCards from "./StatCards";
 
@@ -8,8 +8,9 @@ const UsersProfileManagement = () => {
   const { user } = location.state;
   const [activeIndex, setActiveIndex] = useState(0);
   const handleStatsClick = (index) => {
-      setActiveIndex(index);
-};
+    setActiveIndex(index);
+  };
+  const navigate = useNavigate();
   return (
     <section className="flex flex-col h-screen overflow-hidden">
       <div className="bg-white rounded-lg p-2 overflow-y-auto flex-1 custom-scrollbar">
@@ -24,12 +25,12 @@ const UsersProfileManagement = () => {
             <h2 className="font-semibold text-[24px]">{user.name}</h2>
           </div>
           <div>
-            <Link
-              to="/users"
+            <button
+              onClick={() => navigate("/users", { replace: true })}
               className="inline-flex items-center justify-center py-2 px-16 border border-black rounded-full"
             >
               Back
-            </Link>
+            </button>
           </div>
         </div>
         {/* END:: Top */}
@@ -85,8 +86,8 @@ const UsersProfileManagement = () => {
             <p className="text-xs text-[#414042] mt-4 text-[12px]">
               ✔ Language courses for beginners (level A1/A2, 1200 words) <br />
               ✔ Language courses for advanced (level B1/B2, 2600 words) <br />
-              ✔ Advanced language courses (level C1/C2, 4000 words) <br />
-              ✔ Access to mini-games and dialogues, podcasts, learning methods{" "}
+              ✔ Advanced language courses (level C1/C2, 4000 words) <br />✔
+              Access to mini-games and dialogues, podcasts, learning methods{" "}
               <br />
               ✔ Possibility to speak the language with a single payment <br />
               ✔ 15% for inviting friends - less stress <br />

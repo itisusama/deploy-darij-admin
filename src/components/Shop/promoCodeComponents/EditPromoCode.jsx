@@ -168,7 +168,7 @@ const EditPromoCode = () => {
         {/* Buttons */}
         <div className="flex justify-end mt-14 pb-6">
                 <button
-                    onClick={() => navigate('/promo-code')}
+                    onClick={() => navigate('/promo-code', {replace: true})}
                     className="w-[210px] h-[44px] rounded-[100px] border border-[#000000] py-2 px-4 font-inter font-[600] text-[16px] leading-6"
                 >
                     Cancel
