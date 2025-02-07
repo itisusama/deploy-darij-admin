@@ -50,37 +50,27 @@ const SideBar = ({ activeSection, setActiveSection }) => {
   };
 
   const handleTabClick = (title, id, route) => {
-    const currentTitle = localStorage.getItem("title"); // Get the current title
-    if (currentTitle) {
-        localStorage.setItem("previous-title", currentTitle); // Save current title as previous
-    }
-    
-    localStorage.setItem("title", title); // Save the new title
+    localStorage.getItem("title");
     navigate(route);
+
+    if (route !== "/games") {
+      localStorage.removeItem("name");
+      localStorage.removeItem("activeIndex");
+      localStorage.removeItem("versionIndex");
+      localStorage.removeItem("languageIndex");
+    }
 };
+console.log("Location:", location.pathname)
 
 useEffect(() => {
-  const savedTitle = localStorage.getItem("title");
-  const matchedItem = sidebarData.find((item) => item.route === location.pathname);
-
-  if (matchedItem) {
-    localStorage.getItem("title"); // Save current title as previous
-    setActiveSection(matchedItem.title);
-    localStorage.setItem("title", matchedItem.title);
-  } else if (savedTitle) {
-    setActiveSection(savedTitle);
-  }
-
-  // Listen to browser back/forward actions
-  const handleBackButton = () => {
-    const previousTitle = localStorage.getItem("previous-title");
-
-    if (previousTitle) {
-      const previousItem = sidebarData.find((item) => item.title === previousTitle);
-      if (previousItem) {
-        navigate(previousItem.route, { replace: true });
-        localStorage.setItem("title", previousTitle); // Set title back
-      }
+  const handleBackButton = (event) => {
+    if (location.pathname === "/dashboard") {
+      event.preventDefault();
+      localStorage.clear();
+      window.history.pushState(null, "", location.pathname);
+    } else if (["/users", "/games", "/shop", "/learn", "/settings"].includes(location.pathname)) {
+      event.preventDefault();
+      navigate("/dashboard");
     }
   };
 
@@ -89,7 +79,7 @@ useEffect(() => {
   return () => {
     window.removeEventListener("popstate", handleBackButton);
   };
-}, [location, navigate, setActiveSection]);
+}, [location.pathname, navigate]);
 
   return (
     <>
