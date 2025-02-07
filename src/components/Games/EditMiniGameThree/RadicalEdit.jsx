@@ -14,7 +14,7 @@ const RadicalEdit = () => {
             <input
               type="text"
               id="text"
-              className="w-[141px] px-3 py-2 border-dashed border text-black border-black rounded-md focus:outline-none focus:ring-1"
+              className="w-[141px] px-3 py-2 rounded-md focus:outline-none focus:ring-1"
               placeholder=""
               readOnly
             />
@@ -38,7 +38,7 @@ const RadicalEdit = () => {
           <div className="">
             <input
               type="text"
-              className="w-[141px] px-3 py-2 border-dashed border border-black text-black rounded-md focus:outline-none focus:ring-1"
+              className="w-[141px] px-3 py-2 rounded-md focus:outline-none focus:ring-1"
               placeholder=""
               readOnly
             />
