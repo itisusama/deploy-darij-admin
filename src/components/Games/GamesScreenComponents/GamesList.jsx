@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import Shipments from "../../../assets/Shipments.svg";
@@ -11,19 +10,19 @@ const GamesList = () => {
     const { languageName } = location.state || {};
     // const { games } = location.state;
     
-        useEffect(() => {
-            const handleBackButton = (event) => {
-                event.preventDefault();
-                navigate('/games'); // Redirect to "/users" when back is pressed
-            };
+        // useEffect(() => {
+        //     const handleBackButton = (event) => {
+        //         event.preventDefault();
+        //         navigate('/games'); // Redirect to "/users" when back is pressed
+        //     };
     
-            window.history.pushState(null, null, window.location.pathname);
-            window.addEventListener('popstate', handleBackButton);
+        //     window.history.pushState(null, null, window.location.pathname);
+        //     window.addEventListener('popstate', handleBackButton);
     
-            return () => {
-                window.removeEventListener('popstate', handleBackButton);
-            };
-        }, [navigate]);
+        //     return () => {
+        //         window.removeEventListener('popstate', handleBackButton);
+        //     };
+        // }, [navigate]);
 
         const [activeIndex, setActiveIndex] = useState(() => {
           const storedIndex = localStorage.getItem("activeIndex");
@@ -33,13 +32,13 @@ const GamesList = () => {
           return title === "Games" && storedIndex !== null ? parseInt(storedIndex, 10) : null;
       });
 
-      useEffect(() => {
-        const title = localStorage.getItem("name");
-        if (title !== "Games") {
-            setActiveIndex(null);
-            localStorage.removeItem("activeIndex");
-        }
-    }, []);
+    //   useEffect(() => {
+    //     const title = localStorage.getItem("name");
+    //     if (title !== "Games") {
+    //         setActiveIndex(null);
+    //         localStorage.removeItem("activeIndex");
+    //     }
+    // }, []);
 
     const miniGames = [
         { 
@@ -74,6 +73,8 @@ const GamesList = () => {
         localStorage.setItem("activeIndex", index);
         localStorage.setItem("name", path);
     };
+
+    console.log("Game List Location", location.pathname)
   
   return (
     <>

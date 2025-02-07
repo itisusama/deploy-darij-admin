@@ -3,10 +3,11 @@ import { IoMdAdd } from "react-icons/io";
 import { FaRegTrashAlt } from "react-icons/fa";
 import { IoIosAddCircleOutline } from "react-icons/io";
 import { IoVolumeHighOutline } from "react-icons/io5";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const AddNewMiniGameFiveManagement = () => {
     const [audioFile, setAudioFile] = useState(null);
+    const navigate = useNavigate();
 
     const handleAudioSelect = (event) => {
         const file = event.target.files[0];
@@ -124,11 +125,9 @@ const AddNewMiniGameFiveManagement = () => {
                 </div>
 
                 <div className="flex justify-end mt-5">
-                    <Link to="/mini-game-five">
-                    <button className="w-[210px] h-[44px] mr-4 rounded-[100px] px-4 py-2 border border-black font-[600] text-[16px] leading-[24px] flex items-center justify-center space-x-2">
+                    <button className="w-[210px] h-[44px] mr-4 rounded-[100px] px-4 py-2 border border-black font-[600] text-[16px] leading-[24px] flex items-center justify-center space-x-2" onClick={()=> navigate("/mini-game-five", {replace: true})}>
                         Cancel
                     </button>
-                    </Link>
                     <button className="w-[210px] h-[44px] mr-4 rounded-[100px] px-4 py-2 bg-[#FFC600] font-[600] text-[16px] leading-[24px] flex items-center justify-center space-x-2" onClick={()=> alert("Functionality will be added soon")}>
                         Add
                     </button>

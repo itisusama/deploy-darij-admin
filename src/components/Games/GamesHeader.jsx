@@ -13,16 +13,17 @@ const GamesHeader = ({ title, path, onBack, onClick }) => {
         } else if (path) {
             if (typeof path === 'object') {
                 // Handle path as an object (e.g., with pathname and state)
-                navigate(path.pathname, { state: path.state });
+                navigate(path.pathname, { state: path.state }, {replace: true});
             } else {
                 // Handle path as a simple string
-                navigate(path);
+                navigate(path, {replace: true});
             }
         }
     };
 
     const handleBack = () => {
-        navigate(onBack);
+        const name = localStorage.getItem("name");
+        navigate("/mini-game-two", { state: { name }, replace: true });
     }
 
     return (

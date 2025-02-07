@@ -88,14 +88,12 @@ const AddMiniGameFourManagement = () => {
         {/* Answer */}
         {/* START:: Buttons */}
                 <div className="relaive right-0 space-x-2 float-right mt-8">
-                          <Link to="/mini-game-four">
                           <button
-                          // onClick={handleNextClick}
+                          onClick={()=> navigate("/mini-game-four", {replace: true})}
                           className="rounded-full bg-transparent border border-black py-[10px] px-[80px] text-[16px] font-inter font-[600]"
                           >
                           Cancel
                           </button>
-                          </Link>
                           <button
                           // onClick={handleNextClick}
                           className="rounded-full bg-[#ffc500] border border-[#ffc500] py-[10px] px-[80px] text-[16px] font-inter font-[600]"

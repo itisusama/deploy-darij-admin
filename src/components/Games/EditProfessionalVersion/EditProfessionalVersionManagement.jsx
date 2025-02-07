@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Text from "../../../assets/Text.svg";
 import Microphone from "../../../assets/Microphone.svg";
 import Image from "../../../assets/Image.svg";
@@ -13,6 +13,8 @@ const EditProfessionalVersionManagement = () => {
   const location = useLocation();
   const { pv } = location.state || {};
   const [activeIndex, setActiveIndex] = useState(0);
+  const navigate = useNavigate();
+
   const icons = [{ name: Text }, { name: Microphone }, { name: Image }];
   const handleCardClick = (index) => {
     setActiveIndex(index);
@@ -219,14 +221,12 @@ const EditProfessionalVersionManagement = () => {
 
         {/* START:: Buttons */}
         <div className="flex gap-3 relative mt-6 bottom-0 float-right">
-          <Link to="/professional-version">
             <button
-              // onClick={handleNextClick}
+              onClick={()=> navigate("/professional-version", {replace: true})}
               className="rounded-full bg-transparent border border-black py-[10px] px-[80px] text-[16px] font-inter font-[600]"
             >
               Cancel
             </button>
-          </Link>
           <button
             onClick={() => alert("Functionality will be added soon")}
             className="rounded-full bg-[#ffc500] border border-[#ffc500] py-[10px] px-[80px] text-[16px] font-inter font-[600]"

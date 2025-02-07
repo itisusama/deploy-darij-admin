@@ -1,9 +1,10 @@
 import React from "react";
 import  RadicalEdit from "./RadicalEdit"
 import Dariggable from "./Dariggable"
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const EditMiniGameThreeManagement = () => {
+  const navigate = useNavigate();
   return (
     <div className="overflow-y-auto h-screen custom-scrollbar">
       <div className="border rounded-3xl border-[#E1E5E8] p-5 m-3">
@@ -26,11 +27,9 @@ const EditMiniGameThreeManagement = () => {
 
         {/* BUTTIONS  */}
         <div className="relaive right-0 space-x-2 float-right mt-12">
-          <Link to="/mini-game-three">
-          <button className="border  text-black font-bold py-2 px-4 rounded-full w-[210px] ">
+          <button className="border  text-black font-bold py-2 px-4 rounded-full w-[210px] " onClick={()=> navigate("/mini-game-three", {replace: true})}>
           Cancel
           </button>
-          </Link>
 
           <button className="border bg-yellow-400 text-black font-bold py-2 px-4 rounded-full hover:bg-yellow-500 w-[210px]" onClick={() => alert("Functionality will be added soon")}>
             Save Change 

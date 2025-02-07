@@ -121,7 +121,7 @@ const AddNewMiniGameOneManagement = () => {
          {/* Buttons */}
          <div className="flex justify-end mt-7">
                 <button
-                    onClick={() => navigate('/mini-game-one')}
+                    onClick={()=> navigate("/mini-game-one", {replace: true})}
                     className="w-52 h-11 rounded-full border border-black font-inter font-semibold text-base leading-6"
                 >
                     Cancel

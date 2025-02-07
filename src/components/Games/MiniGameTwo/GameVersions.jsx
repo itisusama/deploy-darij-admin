@@ -13,7 +13,13 @@ const GameVersions = () => {
   const location = useLocation();
   const { name } = location.state || {};
 
-  const [activeIndex, setActiveIndex] = useState(null);
+   const [activeIndex, setActiveIndex] = useState(() => {
+            const storedIndex = localStorage.getItem("versionIndex");
+            const storedName = localStorage.getItem("name");
+            const title = localStorage.getItem("title");
+            
+            return title === "Games" && storedIndex !== null ? parseInt(storedIndex, 10) : null;
+        });
   const navigate = useNavigate();
 
   // Define paths based on the `name` value
@@ -40,12 +46,7 @@ const GameVersions = () => {
 
   const handleCardClick = (index, path) => {
     setActiveIndex(index);
-    setActiveIndex(index);
-
-    // Check if local storage title is "Games"
-    if (localStorage.getItem("title") === "Games") {
-      localStorage.setItem("versionIndex", index);
-    }
+    localStorage.setItem("versionIndex", index);
     navigate(path, { state: { name } });
   };
 
