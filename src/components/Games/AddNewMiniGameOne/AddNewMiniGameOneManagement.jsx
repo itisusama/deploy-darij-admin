@@ -12,7 +12,14 @@ const AddNewMiniGameOneManagement = () => {
 
 
     const handleDelete = (i) => {
+        const deletedTag = tags[i].text; // Get the text of the deleted tag
         setTags(tags.filter((tag, index) => index !== i));
+    
+        // Find the corresponding image index and remove it from selectedImages
+        const wordIndex = miniGameOne.findIndex((item) => item.title === deletedTag);
+        if (wordIndex !== -1) {
+            setSelectedImages(selectedImages.filter((index) => index !== wordIndex));
+        }
     };
 
     const handleAddition = (tag) => {
@@ -61,9 +68,9 @@ const AddNewMiniGameOneManagement = () => {
                             handleAddition={handleAddition}
                             placeholder=""
                             classNames={{
-                                tags: "flex items-center bg-[#f2f2f2] p-2 rounded-md",
-                                tagInputField: "bg-transparent w-full h-[38px] px-4 py-2 border-none shadow-none",
-                                selected: "flex flex-wrap",
+                                tags: "flex items-center bg-[#f2f2f2] p-2 rounded-md py-2",
+                                tagInputField: "bg-transparent w-full h-[38px] px-4 py-2 border-none shadow-none text-trasparent hidden",
+                                selected: "flex flex-wrap h-8",
                                 tag: "flex items-center bg-[#FFFFFF] text-[#8D8D8D] text-sm px-3 py-0 rounded-md mr-2 my-1",
                                 remove: "text-black"
                             }}
@@ -71,7 +78,7 @@ const AddNewMiniGameOneManagement = () => {
                                 <span
                                 onClick={() => {
                                     console.log("Tag delete clicked at index:", index);
-                                    handleDelete(index); // Call your handleDelete function directly
+                                    handleDelete(index);
                                 }}
                                     className="ml-2 text-black cursor-pointer"
                                     style={{ fontSize: '14px'}}
