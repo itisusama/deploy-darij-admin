@@ -63,7 +63,7 @@ const WordsContainer = ({path, customWordlist}) => {
                 {/* <div className="bg-[#F5F5F5] rounded-full py-4 px-6 cursor-pointer ">
                   <img  src={word.menu} alt="" />
                 </div> */}
-                <div className=" bg-[#F5F5F5] w-[40px] h-[40px] flex justify-center items-center absolute rounded-full right-2">
+                <div className=" bg-[#F5F5F5] w-[40px] h-[40px] flex justify-center items-center absolute rounded-full right-2 cursor-pointer" onClick={() => toggleMenu(index)}>
                   <FontAwesomeIcon
                     className="text-[16px] font-inter   font-[400]  text-[#626262] cursor-pointer"
                     icon={faEllipsisVertical}
@@ -125,7 +125,7 @@ const WordsContainer = ({path, customWordlist}) => {
                             </button>
                    <button
                      className="px-3 py-1 border rounded-md bg-gray-200 hover:bg-gray-300 disabled:bg-gray-100 disabled:cursor-not-allowed"
-                     onClick={() => handlePageChange(currentPage + 1)}
+                    //  onClick={() => handlePageChange(currentPage + 1)}
                      disabled={currentPage === totalPages}
                    >
                      <img src={Right} alt="right-icon" className="w-6 h-6" />
